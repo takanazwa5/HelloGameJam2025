@@ -1,8 +1,14 @@
 class_name Player extends CharacterBody2D
 
 
-const MAX_SPEED: float = 50.0
+const SPEED: float = 50.0
 const ACCELERATION: float = 1.0
+
+
+var speed_modifier: float = 1.0:
+	set(value):
+		speed_modifier = clampf(value, 0.1, 1.0)
+		print("speed modifier set to %s" % speed_modifier)
 
 var pollen: int = 100:
 	set(value):
@@ -13,9 +19,9 @@ var pollen: int = 100:
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var ui: UserInterface = %UI
 
+
 func _ready() -> void:
 	pollen = 0
-
 
 
 func _physics_process(_delta: float) -> void:
@@ -23,8 +29,8 @@ func _physics_process(_delta: float) -> void:
 	var direction: Vector2 = Vector2(mouse_pos - position).normalized()
 
 
-	velocity.x = move_toward(velocity.x, direction.x * MAX_SPEED, ACCELERATION)
-	velocity.y = move_toward(velocity.y, direction.y * MAX_SPEED, ACCELERATION)
+	velocity.x = move_toward(velocity.x, direction.x * SPEED * speed_modifier, ACCELERATION)
+	velocity.y = move_toward(velocity.y, direction.y * SPEED * speed_modifier, ACCELERATION)
 
 	sprite.flip_h = velocity.x < 0
 

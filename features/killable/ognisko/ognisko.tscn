@@ -6,29 +6,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o364"]
 size = Vector2(18, 29)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyese"]
+atlas = ExtResource("2_dyese")
+region = Rect2(0, 0, 22, 38)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sj6w3"]
 atlas = ExtResource("2_dyese")
-region = Rect2(0, 0, 18, 36)
+region = Rect2(22, 0, 22, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbrk1"]
 atlas = ExtResource("2_dyese")
-region = Rect2(18, 0, 18, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e71tt"]
-atlas = ExtResource("2_dyese")
-region = Rect2(36, 0, 18, 36)
+region = Rect2(44, 0, 22, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e48tw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_dyese")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_sj6w3")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lbrk1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e71tt")
 }],
 "loop": true,
 "name": &"ognisko",
@@ -46,4 +46,4 @@ shape = SubResource("RectangleShape2D_7o364")
 sprite_frames = SubResource("SpriteFrames_e48tw")
 animation = &"ognisko"
 autoplay = "ognisko"
-frame_progress = 0.829901
+frame_progress = 0.184035
