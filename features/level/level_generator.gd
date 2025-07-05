@@ -34,11 +34,16 @@ func _process(delta: float) -> void:
 	pass
 
 func generate_map():
-	for x in size_x:
+	var used_cells : Array[Vector2i] = tilemap_layer.get_used_cells()
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+
+	for x in used_rect.size.x:
 		map_grid.append([])
-		for y in size_y:
-			var new_tile_data = LevelTileData.new(x, y, TileType.GRASS)
+		for y in used_rect.size.y:
+			var tile_id : int = tilemap_layer.get_cell_source_id(Vector2i(x, y))
+			var new_tile_data = LevelTileData.new(x, y, get_tile_type(tile_id))
 			map_grid[x].append(new_tile_data)
+
 
 func update_map():
 	for x in size_x:
@@ -52,7 +57,15 @@ func set_tile(tile_type : TileType, pos_x : int, pos_y : int):
 
 	map_grid[pos_x][pos_y] = new_tile
 
-func get_tile_type(tile_type : TileType):
+func get_tile_type(index : int):
+	if index == 1:
+		return TileType.GRASS
+	if index == 0:
+		return TileType.CORRUPTED
+	else:
+		return 1
+
+func get_tile_index(tile_type : TileType):
 	if tile_type == TileType.GRASS:
 		return 1
 	elif tile_type == TileType.CORRUPTED:
