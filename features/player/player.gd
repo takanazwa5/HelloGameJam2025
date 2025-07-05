@@ -19,6 +19,11 @@ var pollen: int = 100:
 		pollen = clampi(value, 0, 100)
 		ui.pollen_label.text = "Pollen: %s" % pollen
 
+		var tween = get_tree().create_tween()
+		tween.tween_property(ui.pollen_progress, ^"value", pollen, 0.1)
+
+		#ui.pollen_progress.value = pollen
+
 var honey: int = 0:
 	set(value):
 		honey = value
