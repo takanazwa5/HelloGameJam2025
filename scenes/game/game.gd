@@ -1,4 +1,4 @@
-class_name Game extends Node
+class_name Game extends Node2D
 
 
 @onready var level: LevelGenerator = %Level

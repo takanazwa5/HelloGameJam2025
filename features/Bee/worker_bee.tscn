@@ -1,12 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6bfml3ty40rv"]
+[gd_scene load_steps=6 format=3 uid="uid://b6bfml3ty40rv"]
 
 [ext_resource type="Script" uid="uid://k3gkv74rbagu" path="res://features/Bee/worker_bee.gd" id="1_1tbwd"]
-[ext_resource type="Texture2D" uid="uid://d22jyfu7uavye" path="res://features/player/player.png" id="1_qraxs"]
+[ext_resource type="Texture2D" uid="uid://vtt7em3y0o2l" path="res://features/beehive/bee_small.png" id="2_1tbwd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tbwd"]
+atlas = ExtResource("2_1tbwd")
+region = Rect2(0, 0, 13, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77wol"]
+atlas = ExtResource("2_1tbwd")
+region = Rect2(13, 0, 13, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdg3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tbwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77wol")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="WorkerBee" type="Node2D"]
 script = ExtResource("1_1tbwd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qraxs")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_fdg3g")
+autoplay = "default"
+frame_progress = 0.740714

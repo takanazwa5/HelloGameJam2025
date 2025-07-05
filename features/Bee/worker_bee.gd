@@ -8,7 +8,13 @@ var home_hive : BeeHive
 var target_pos : Vector2i
 var fixed_tile : bool = true
 
+var wait_timer = 0.0
+
 func _process(delta: float) -> void:
+	if wait_timer > 0.0:
+		wait_timer -= delta
+		pass
+
 	var current_destination = Vector2(0, 0)
 	if fixed_tile:
 		current_destination = home_hive.position
@@ -19,7 +25,6 @@ func _process(delta: float) -> void:
 	# move_toward(position, current_destination, delta * speed)
 
 	position = Vector2(new_pos)
-
 
 	if position.distance_to(current_destination) < 0.1:
 		if fixed_tile:

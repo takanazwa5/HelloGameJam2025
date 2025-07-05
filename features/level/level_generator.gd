@@ -68,7 +68,7 @@ func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 		var new_tile: LevelTileData = LevelTileData.new(pos_x, pos_y, tile_type, get_alternative_id(current_tile.tile_index))
 		map_grid[pos_x][pos_y] = new_tile
 
-func get_best_tile_for_bee(bee : WorkerBee, bee_array ) -> Vector2:
+func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
 	var best_pos : Vector2 = Vector2.ZERO
 	var best_distance : float = INF
 	var bee_pos : Vector2 = bee.position

@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://b2a1nh3d2xlrx" path="res://features/flower/flower.tscn" id="3_0sr1o"]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_kelw5")
 
 [node name="Level" parent="." instance=ExtResource("1_7h61r")]
