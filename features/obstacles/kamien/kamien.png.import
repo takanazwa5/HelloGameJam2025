@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da0tvmbnrkt5i"
-path="res://.godot/imported/shadow.png-7295a178212de09e83ead9dc03fecd73.ctex"
+uid="uid://jp7k3lkremx1"
+path="res://.godot/imported/kamien.png-570c31317b1eec85bd8f396d78d2bf25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/obstacles/shadow.png"
-dest_files=["res://.godot/imported/shadow.png-7295a178212de09e83ead9dc03fecd73.ctex"]
+source_file="res://features/obstacles/kamien/kamien.png"
+dest_files=["res://.godot/imported/kamien.png-570c31317b1eec85bd8f396d78d2bf25.ctex"]
 
 [params]
 
