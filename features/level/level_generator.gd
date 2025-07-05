@@ -68,7 +68,7 @@ func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 		var new_tile: LevelTileData = LevelTileData.new(pos_x, pos_y, tile_type, get_alternative_id(current_tile.tile_index))
 		map_grid[pos_x][pos_y] = new_tile
 
-func get_best_tile_for_bee(bee : WorkerBee) -> Vector2:
+func get_best_tile_for_bee(bee : WorkerBee, bee_array ) -> Vector2:
 	var best_pos : Vector2 = Vector2.ZERO
 	var best_distance : float = INF
 	var bee_pos : Vector2 = bee.position
@@ -79,7 +79,13 @@ func get_best_tile_for_bee(bee : WorkerBee) -> Vector2:
 			if tile.tile_type == TileType.CORRUPTED:
 				var tile_world_pos = tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
 				var dist = bee_pos.distance_to(tile_world_pos)
-				if dist < best_distance:
+
+				var bad_pos = false
+				for current_bee in bee_array:
+					if Vector2(current_bee.target_pos.x, current_bee.target_pos.y) == Vector2(tile_world_pos.x, tile_world_pos.y):
+						bad_pos = true
+
+				if !bad_pos && dist < best_distance:
 					best_distance = dist
 					best_pos = tile_world_pos
 

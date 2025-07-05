@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 
 
 func get_best_tile():
-	return level.get_best_tile_for_bee(self)
+	return level.get_best_tile_for_bee(self, game.bees)
 
 func set_home(home : BeeHive):
 	home_hive = home
