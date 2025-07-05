@@ -26,40 +26,51 @@ radius = 139.291
 y_sort_enabled = true
 script = ExtResource("1_4ugtf")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Level Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 10.0
+wait_time = 5.0
+autostart = true
+
+[node name="Corruption Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 15.0
 autostart = true
 
 [node name="BaseStation" type="Sprite2D" parent="."]
 texture = ExtResource("2_berpe")
+offset = Vector2(0, -64)
 
 [node name="Administration" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
 position = Vector2(80, 0)
 texture = ExtResource("3_katje")
+offset = Vector2(0, -64)
 
 [node name="Workshop" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-112, 0)
 texture = ExtResource("3_8h2px")
+offset = Vector2(0, -64)
 
 [node name="Pipe" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-208, 8)
 texture = ExtResource("5_yb8go")
+offset = Vector2(0, -64)
 
 [node name="Storage" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
 position = Vector2(192, 0)
 texture = ExtResource("6_xkw0e")
+offset = Vector2(0, -64)
 
 [node name="SlowArea" type="Area2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(0, -64)
 monitorable = false
 
 [node name="BaseStationSlow" type="CollisionShape2D" parent="SlowArea"]
