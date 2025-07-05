@@ -26,7 +26,7 @@ func _ready() -> void:
 
 func _level_up() -> void:
 	_level += 1
-
+	Global.ui.level_label.text = str(_level)
 
 	match _level:
 		1:
