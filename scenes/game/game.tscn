@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=10 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c71c4f8mgpjkw" path="res://features/killable/ognisko/ognisko.tscn" id="6_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://wugdxaccemxi" path="res://features/factory/factory.tscn" id="7_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://b8n517sc0drjs" path="res://features/obstacles/wiatrak/wiatrak.tscn" id="8_87uf6"]
+[ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -58,3 +59,9 @@ text = "00:00"
 [node name="GameTimer" type="Timer" parent="CanvasLayer/GameTimeLabel"]
 unique_name_in_owner = true
 autostart = true
+
+[node name="ButtonHints" parent="CanvasLayer" instance=ExtResource("9_2a8rs")]
+offset_left = 300.0
+offset_top = 140.0
+offset_right = 316.0
+offset_bottom = 176.0
