@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b15qu6w16me52"
-path="res://.godot/imported/kosiara.png-13a62541c0dbe1e118d3f580512869ad.ctex"
+path="res://.godot/imported/kosiara.png-76ec4ff7419fb2c333cf1d76d0f3b4f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/killables/kosiara.png"
-dest_files=["res://.godot/imported/kosiara.png-13a62541c0dbe1e118d3f580512869ad.ctex"]
+source_file="res://features/killable/kosiara/kosiara.png"
+dest_files=["res://.godot/imported/kosiara.png-76ec4ff7419fb2c333cf1d76d0f3b4f1.ctex"]
 
 [params]
 

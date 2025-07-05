@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://djc7dma5fwyrk"]
+
+[ext_resource type="Texture2D" uid="uid://b15qu6w16me52" path="res://features/killable/kosiara/kosiara.png" id="1_7o364"]
+[ext_resource type="Script" uid="uid://4or43jtsq8wi" path="res://features/killable/killable.gd" id="1_ny87e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o364"]
+size = Vector2(28, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny87e"]
+atlas = ExtResource("1_7o364")
+region = Rect2(0, 0, 52, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqbpi"]
+atlas = ExtResource("1_7o364")
+region = Rect2(52, 0, 52, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toqto"]
+atlas = ExtResource("1_7o364")
+region = Rect2(104, 0, 52, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7lr4"]
+atlas = ExtResource("1_7o364")
+region = Rect2(156, 0, 52, 43)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e48tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny87e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqbpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toqto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7lr4")
+}],
+"loop": true,
+"name": &"kosiara",
+"speed": 5.0
+}]
+
+[node name="Kosiara" type="Area2D"]
+script = ExtResource("1_ny87e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 12.5)
+shape = SubResource("RectangleShape2D_7o364")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e48tw")
+animation = &"kosiara"
+autoplay = "kosiara"
+frame_progress = 0.00306623
