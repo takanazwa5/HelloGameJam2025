@@ -36,4 +36,4 @@ position = Vector2(172, 299)
 position = Vector2(90, 330)
 
 [node name="Factory" parent="." instance=ExtResource("7_bdhmt")]
-position = Vector2(692, 47)
+position = Vector2(610, 109)

@@ -26,17 +26,30 @@ func _ready() -> void:
 func _level_up() -> void:
 	_level += 1
 
+
 	match _level:
 		2:
 			administration.show()
 			administration_slow.disabled = false
+			corruption_timer.wait_time = 12.5
+
 		3:
+			corruption_timer.wait_time = 10.0
+		4:
 			workshop.show()
 			workshop_slow.disabled = false
-		4:
+			corruption_timer.wait_time = 8.0
+
+		5:
+			corruption_timer.wait_time = 6.5
+		6:
 			pipe.show()
 			pipe_slow.disabled = false
-		5:
+			corruption_timer.wait_time = 5.5
+		7:
+			corruption_timer.wait_time = 4.0
+		8:
+			corruption_timer.wait_time = 2.5
 			storage.show()
 			storage_slow.disabled = false
 			timer.stop()
