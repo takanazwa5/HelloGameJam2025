@@ -53,10 +53,19 @@ func update_map() -> void:
 			tilemap_layer.set_cell(Vector2(x, y), current_tile.tile_index, Vector2i(0, 0))
 
 func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+	if pos_x >= used_rect.size.x || pos_x < 0:
+		pass
+
+	if pos_y >= used_rect.size.y || pos_y < 0:
+		pass
+
+
+
 	var current_tile : LevelTileData = map_grid[pos_x][pos_y]
 
 	if current_tile.tile_type != tile_type:
-		var new_tile: LevelTileData = LevelTileData.new(pos_x, pos_y, get_alternative_id(current_tile.tile_index), tile_type)
+		var new_tile: LevelTileData = LevelTileData.new(pos_x, pos_y, tile_type, get_alternative_id(current_tile.tile_index))
 		map_grid[pos_x][pos_y] = new_tile
 
 func get_tile_type(index : int) -> int:
@@ -76,6 +85,7 @@ func get_tile_index(tile_type : TileType) -> int:
 		return 1
 
 var tile_alternatives = {
+	# Grass
 	2: 11,
 	3: 12,
 	4: 13,
@@ -84,8 +94,35 @@ var tile_alternatives = {
 	7: 16,
 	8: 17,
 	9: 18,
+
+	# Grass Water
 	10: 19,
+	20: 29,
+	21: 30,
+	22: 31,
+	23: 32,
+	24: 33,
+	25: 34,
+	26: 35,
+	27: 36,
+	28: 37,
+
+	# Water
+	38: 47,
+	39: 48,
+	40: 49,
+	41: 50,
+	42: 51,
+	43: 52,
+	44: 53,
+	45: 54,
+	46: 55
 }
 
 func get_alternative_id(tile_id: int):
-	return tile_alternatives[tile_id]
+	if tile_alternatives.has(tile_id):
+		return tile_alternatives[tile_id]
+
+	for current_tile_id : int in tile_alternatives:
+		if tile_alternatives[current_tile_id] == tile_id:
+			return current_tile_id
