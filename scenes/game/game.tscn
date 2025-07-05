@@ -41,3 +41,20 @@ position = Vector2(610, 109)
 
 [node name="Wiatrak" parent="." instance=ExtResource("8_87uf6")]
 position = Vector2(275, 314)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameTimeLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.5
+offset_right = 20.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "00:00"
+
+[node name="GameTimer" type="Timer" parent="CanvasLayer/GameTimeLabel"]
+unique_name_in_owner = true
+autostart = true

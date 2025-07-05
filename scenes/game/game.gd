@@ -1,20 +1,28 @@
 class_name Game extends Node2D
 
 
-@onready var level: LevelGenerator = %Level
-@onready var player: Player = %Player
-
 const BEE: PackedScene = preload("res://features/Bee/worker_bee.tscn")
 const BEEHIVE: PackedScene = preload("res://features/beehive/beehive.tscn")
+
+
+@onready var level: LevelGenerator = %Level
+@onready var player: Player = %Player
+@onready var game_time_label: Label = %GameTimeLabel
+@onready var game_timer: Timer = %GameTimer
 
 
 var bee_cost: int = 10
 var hives: Array = []
 var bees: Array = []
+var game_time: int = 0
 
 
 func _init() -> void:
 	Global.game = self
+
+
+func _ready() -> void:
+	game_timer.timeout.connect(_on_game_timer_timeout)
 
 
 func _process(_delta: float) -> void:
@@ -70,3 +78,17 @@ func _spawn_beehive() -> void:
 	add_child(new_bee_hive)
 	new_bee_hive.position = player.position;
 	hives.append(new_bee_hive)
+
+
+func _on_game_timer_timeout() -> void:
+	game_time += 1
+	var minutes = game_time / 60
+	var seconds = game_time % 60
+	if minutes < 10:
+		game_time_label.text = "0%s" % minutes
+	else:
+		game_time_label.text = "%s" % minutes
+	if seconds < 10:
+		game_time_label.text += ":0%s" % seconds
+	else:
+		game_time_label.text += ":%s" % seconds
