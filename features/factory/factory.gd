@@ -1,8 +1,6 @@
 class_name Factory extends Node2D
 
-
 var _level: int = 1
-
 
 @onready var administration: Sprite2D = %Administration
 @onready var workshop: Sprite2D = %Workshop
@@ -14,11 +12,13 @@ var _level: int = 1
 @onready var workshop_slow: CollisionShape2D = %WorkshopSlow
 @onready var pipe_slow: CollisionShape2D = %PipeSlow
 @onready var storage_slow: CollisionShape2D = %StorageSlow
-@onready var timer: Timer = %Timer
+@onready var timer: Timer = %"Level Timer"
+@onready var corruption_timer: Timer = %"Corruption Timer"
 
 
 func _ready() -> void:
 	timer.timeout.connect(_on_timer_timeout)
+	corruption_timer.timeout.connect(on_corruption_timer_timeout)
 	slow_area.body_entered.connect(_on_slow_area_body_entered)
 	slow_area.body_exited.connect(_on_slow_area_body_exited)
 
@@ -47,6 +47,13 @@ func _level_up() -> void:
 
 func _on_timer_timeout() -> void:
 	_level_up()
+
+func on_corruption_timer_timeout() -> void:
+	var best_tile = Global.game.level.get_best_tile_for_factory(self)
+	Global.game.level.set_tile(LevelGenerator.TileType.CORRUPTED, best_tile.x / 16, best_tile.y / 16)
+	# print("PosX: %s" % best_tile.x )
+	# print("PosY: %s" % best_tile.y )
+
 
 
 func _on_slow_area_body_entered(body: Node2D) -> void:

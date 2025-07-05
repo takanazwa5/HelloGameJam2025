@@ -26,9 +26,14 @@ radius = 139.291
 y_sort_enabled = true
 script = ExtResource("1_4ugtf")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Level Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 10.0
+autostart = true
+
+[node name="Corruption Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 15.0
 autostart = true
 
 [node name="BaseStation" type="Sprite2D" parent="."]

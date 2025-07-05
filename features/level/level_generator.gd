@@ -77,7 +77,26 @@ func get_tile(pos_x : int, pos_y : int) -> TileType:
 
 	return current_tile.tile_type
 
+func get_best_tile_for_factory(factory: Factory) -> Vector2:
+	var best_pos : Vector2 = Vector2.ZERO
+	var best_distance : float = INF
+	var factory_pos : Vector2 = factory.position
 
+	for x in map_grid.size():
+		for y in map_grid[x].size():
+			var tile : LevelTileData = map_grid[x][y]
+			if tile.tile_type == TileType.NORMAL:
+				var tile_world_pos = tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
+				var dist = factory_pos.distance_to(tile_world_pos)
+
+				if dist < best_distance:
+					best_distance = dist
+					best_pos = tile_world_pos
+
+	if best_distance != INF:
+		return best_pos
+	else:
+		return Vector2.ZERO
 
 func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
 	var best_pos : Vector2 = Vector2.ZERO
