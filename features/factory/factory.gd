@@ -1,6 +1,6 @@
 class_name Factory extends Node2D
 
-var _level: int = 1
+var _level: int = 0
 
 @onready var administration: Sprite2D = %Administration
 @onready var workshop: Sprite2D = %Workshop
@@ -21,6 +21,7 @@ func _ready() -> void:
 	corruption_timer.timeout.connect(on_corruption_timer_timeout)
 	slow_area.body_entered.connect(_on_slow_area_body_entered)
 	slow_area.body_exited.connect(_on_slow_area_body_exited)
+	_level_up()
 
 
 func _level_up() -> void:
@@ -28,28 +29,50 @@ func _level_up() -> void:
 
 
 	match _level:
+		1:
+			corruption_timer.wait_time = 15
+
+			tween_progress_value(14.0)
+
+
 		2:
 			administration.show()
 			administration_slow.disabled = false
 			corruption_timer.wait_time = 12.5
 
+			tween_progress_value(26.0)
+
 		3:
 			corruption_timer.wait_time = 10.0
+
+			tween_progress_value(37.5)
 		4:
 			workshop.show()
 			workshop_slow.disabled = false
 			corruption_timer.wait_time = 8.0
 
+			tween_progress_value(49.5)
+
 		5:
 			corruption_timer.wait_time = 6.5
+
+			tween_progress_value(61.5)
 		6:
 			pipe.show()
 			pipe_slow.disabled = false
 			corruption_timer.wait_time = 5.5
+
+			tween_progress_value(73.0)
 		7:
 			corruption_timer.wait_time = 4.0
+
+			tween_progress_value(85.0)
+
 		8:
 			corruption_timer.wait_time = 2.5
+
+			tween_progress_value(100.0)
+
 			storage.show()
 			storage_slow.disabled = false
 			timer.stop()
@@ -57,6 +80,13 @@ func _level_up() -> void:
 
 	print("factory level up")
 
+func tween_progress_value(new_value : float):
+	var tween = get_tree().create_tween()
+	tween.tween_property(Global.ui.level_progress, ^"value", new_value, 0.5)
+
+	var scale_tween = get_tree().create_tween()
+	scale_tween.tween_property(Global.ui.level_progress, ^"scale", Vector2(1.05, 1.05), 0.1)
+	scale_tween.chain().tween_property(Global.ui.level_progress, ^"scale", Vector2(1, 1), 0.1)
 
 func _on_timer_timeout() -> void:
 	_level_up()

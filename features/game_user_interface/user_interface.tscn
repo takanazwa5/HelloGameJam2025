@@ -1,13 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dew7m6ikx6mwt"]
+[gd_scene load_steps=9 format=3 uid="uid://dew7m6ikx6mwt"]
 
 [ext_resource type="Script" uid="uid://xix6b1ncpie3" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_eg8ul"]
+[ext_resource type="Texture2D" uid="uid://hulq0m426efc" path="res://Textures/ui/pasek trudności/difficultybar-empty.png" id="3_gbwgi"]
+[ext_resource type="Texture2D" uid="uid://7xq3vj480ghu" path="res://Textures/ui/pasek trudności/difficultybar-full.png" id="4_o3qup"]
+[ext_resource type="Texture2D" uid="uid://cayubgaouqgc" path="res://Textures/ui/pasek pyłku/pollenbar-empty.png" id="5_jvitl"]
+[ext_resource type="Texture2D" uid="uid://bkg3wtg3epa55" path="res://Textures/ui/pasek pyłku/pollenbar-full.png" id="6_lpmk0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pw3wt"]
 font = ExtResource("2_eg8ul")
 font_size = 12
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eg8ul"]
+load_path = "res://.godot/imported/2difficultybar-empty.png-f9a9a46f3c24471aab75180e0a44f23d.ctex"
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -51,3 +58,50 @@ size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_eg8ul")
 text = "Honey:"
 label_settings = SubResource("LabelSettings_pw3wt")
+
+[node name="LevelContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 295.56
+offset_top = 4.0
+offset_right = 317.56
+offset_bottom = 80.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="EmptyLevel" type="TextureRect" parent="LevelContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_eg8ul")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="LevelContainer"]
+layout_mode = 2
+step = 0.5
+fill_mode = 3
+texture_under = ExtResource("3_gbwgi")
+texture_progress = ExtResource("4_o3qup")
+
+[node name="PollenContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 283.0
+offset_top = 4.0
+offset_right = 305.0
+offset_bottom = 73.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="EmptyLevel" type="TextureRect" parent="PollenContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_eg8ul")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PollenContainer"]
+layout_mode = 2
+step = 0.5
+value = 25.5
+fill_mode = 3
+texture_under = ExtResource("5_jvitl")
+texture_progress = ExtResource("6_lpmk0")
