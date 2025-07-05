@@ -5,7 +5,18 @@ const MAX_SPEED: float = 50.0
 const ACCELERATION: float = 1.0
 
 
-@onready var sprite_2d: Sprite2D = %Sprite2D
+var pollen: int = 100:
+	set(value):
+		pollen = clampi(value, 0, 100)
+		ui.pollen_label.text = "Pollen: %s" % pollen
+
+
+@onready var sprite: AnimatedSprite2D = %Sprite
+@onready var ui: UserInterface = %UI
+
+
+func _ready() -> void:
+	pollen = 100
 
 
 func _physics_process(_delta: float) -> void:
@@ -16,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 	velocity.x = move_toward(velocity.x, direction.x * MAX_SPEED, ACCELERATION)
 	velocity.y = move_toward(velocity.y, direction.y * MAX_SPEED, ACCELERATION)
 
-	sprite_2d.flip_h = velocity.x < 0
+	sprite.flip_h = velocity.x < 0
 
 	move_and_slide()
 
