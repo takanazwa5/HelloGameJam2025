@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6bfml3ty40rv"]
+[gd_scene load_steps=8 format=3 uid="uid://b6bfml3ty40rv"]
 
 [ext_resource type="Script" uid="uid://k3gkv74rbagu" path="res://features/Bee/worker_bee.gd" id="1_1tbwd"]
 [ext_resource type="Texture2D" uid="uid://vtt7em3y0o2l" path="res://features/beehive/bee_small.png" id="2_1tbwd"]
+[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/shadow.png" id="3_77wol"]
+[ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_fdg3g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbwd"]
 atlas = ExtResource("2_1tbwd")
@@ -32,4 +34,10 @@ script = ExtResource("1_1tbwd")
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_fdg3g")
 autoplay = "default"
-frame_progress = 0.740714
+frame_progress = 0.397684
+offset = Vector2(0, -5)
+script = ExtResource("3_fdg3g")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.470588)
+texture = ExtResource("3_77wol")

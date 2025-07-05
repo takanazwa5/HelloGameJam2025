@@ -9,3 +9,4 @@ script = ExtResource("1_dpwgl")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture = ExtResource("2_ibugi")
+offset = Vector2(0, -15)

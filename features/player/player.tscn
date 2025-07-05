@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://res5ogmnb6qh"]
+[gd_scene load_steps=12 format=3 uid="uid://res5ogmnb6qh"]
 
 [ext_resource type="Script" uid="uid://lqdijs65lcw0" path="res://features/player/player.gd" id="1_sjcu7"]
 [ext_resource type="Texture2D" uid="uid://d22jyfu7uavye" path="res://features/player/player.png" id="2_fcb3x"]
+[ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_6xbq4"]
 [ext_resource type="PackedScene" uid="uid://dew7m6ikx6mwt" path="res://features/game_user_interface/user_interface.tscn" id="3_emvbc"]
+[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/shadow.png" id="4_i250s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcb3x"]
 atlas = ExtResource("2_fcb3x")
@@ -41,7 +43,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ao3hl"]
-size = Vector2(16, 16)
+size = Vector2(16, 15)
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -53,8 +55,15 @@ sprite_frames = SubResource("SpriteFrames_y2cyt")
 animation = &"Bee"
 autoplay = "Bee"
 frame_progress = 0.881772
+offset = Vector2(0, -7.685)
+script = ExtResource("3_6xbq4")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.470588)
+texture = ExtResource("4_i250s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_ao3hl")
 
 [node name="Camera2D" type="Camera2D" parent="."]

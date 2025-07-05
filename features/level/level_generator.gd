@@ -55,12 +55,9 @@ func update_map() -> void:
 func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
 	if pos_x >= used_rect.size.x || pos_x < 0:
-		pass
-
+		return
 	if pos_y >= used_rect.size.y || pos_y < 0:
-		pass
-
-
+		return
 
 	var current_tile : LevelTileData = map_grid[pos_x][pos_y]
 
