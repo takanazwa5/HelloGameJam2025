@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=4 uid="uid://cojnw7u11cd6b"]
+
+[ext_resource type="Script" uid="uid://c807exddq584w" path="res://features/level/level_generator.gd" id="1_5ntxm"]
+[ext_resource type="Texture2D" uid="uid://4oam64q3bbj5" path="res://features/level/Corrupted.png" id="2_mqsgy"]
+[ext_resource type="Texture2D" uid="uid://b72nhy8a0d4jy" path="res://features/level/Grass.png" id="3_o7ove"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r5lgi"]
+texture = ExtResource("2_mqsgy")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_retgc"]
+texture = ExtResource("3_o7ove")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8yp3g"]
+sources/0 = SubResource("TileSetAtlasSource_r5lgi")
+sources/1 = SubResource("TileSetAtlasSource_retgc")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5ntxm")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIAAIAAQAAAAAAAAAJAAIAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAJAAUAAQAAAAAAAAAIAAUAAQAAAAAAAAAHAAUAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_8yp3g")
