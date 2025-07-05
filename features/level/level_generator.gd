@@ -44,8 +44,11 @@ func generate_map() -> void:
 
 
 func update_map() -> void:
-	for x: int in size_x:
-		for y: int in size_y:
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+
+
+	for x: int in used_rect.size.x:
+		for y: int in used_rect.size.y:
 			var current_tile : LevelTileData = map_grid[x][y]
 			tilemap_layer.set_cell(Vector2(x, y), get_tile_type(current_tile.tile_type), Vector2i(0, 0))
 
