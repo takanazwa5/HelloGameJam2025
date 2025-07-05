@@ -6,6 +6,7 @@ class_name LevelGenerator extends Node2D
 enum TileType {
 	NORMAL,
 	CORRUPTED,
+	NONE
 }
 
 
@@ -64,6 +65,19 @@ func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 	if current_tile.tile_type != tile_type:
 		var new_tile: LevelTileData = LevelTileData.new(pos_x, pos_y, tile_type, get_alternative_id(current_tile.tile_index))
 		map_grid[pos_x][pos_y] = new_tile
+
+func get_tile(pos_x : int, pos_y : int) -> TileType:
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+	if pos_x >= used_rect.size.x || pos_x < 0:
+		return TileType.NONE
+	if pos_y >= used_rect.size.y || pos_y < 0:
+		return TileType.NONE
+
+	var current_tile : LevelTileData = map_grid[pos_x][pos_y]
+
+	return current_tile.tile_type
+
+
 
 func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
 	var best_pos : Vector2 = Vector2.ZERO

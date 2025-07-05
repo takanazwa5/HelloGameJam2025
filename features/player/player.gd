@@ -15,6 +15,11 @@ var pollen: int = 100:
 		pollen = clampi(value, 0, 100)
 		ui.pollen_label.text = "Pollen: %s" % pollen
 
+var honey: int = 0:
+	set(value):
+		honey = value
+		ui.honey_label.text = "Honey: %s" % honey
+
 
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var ui: UserInterface = %UI
@@ -22,7 +27,7 @@ var pollen: int = 100:
 
 func _ready() -> void:
 	pollen = 0
-
+	honey = 0
 
 func _physics_process(_delta: float) -> void:
 	var mouse_pos: Vector2 = get_global_mouse_position()

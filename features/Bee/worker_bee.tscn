@@ -34,7 +34,7 @@ script = ExtResource("1_1tbwd")
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_fdg3g")
 autoplay = "default"
-frame_progress = 0.397684
+frame_progress = 0.0303967
 offset = Vector2(0, -5)
 script = ExtResource("3_fdg3g")
 
