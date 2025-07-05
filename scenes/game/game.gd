@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"SpawnBee"):
+	if event.is_action_pressed(&"SpawnBee") && hives.size() > 0:
 		var new_bee = BEE.instantiate()
 		add_child(new_bee)
 		new_bee.position = player.position

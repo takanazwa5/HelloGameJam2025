@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://dew7m6ikx6mwt"]
 
-[ext_resource type="Script" uid="uid://xix6b1ncpie3" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
-[ext_resource type="FontFile" uid="uid://c2x327cv7voqq" path="res://Fonts/Pixel (47)/Coder's Crux.otf" id="2_eg8ul"]
+[ext_resource type="Script" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
+[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_eg8ul"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pw3wt"]
 font = ExtResource("2_eg8ul")
+font_size = 12
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
@@ -30,5 +31,6 @@ theme_override_constants/margin_bottom = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_eg8ul")
 text = "Pollen:"
 label_settings = SubResource("LabelSettings_pw3wt")

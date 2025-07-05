@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bubjpywovpeuc"]
+[gd_scene load_steps=3 format=3 uid="uid://bubjpywovpeuc"]
 
 [ext_resource type="Script" uid="uid://c7g3yr0yusxps" path="res://features/main_menu/main_menu.gd" id="1_nya6c"]
+[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_tchvw"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -28,9 +29,13 @@ grow_vertical = 2
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tchvw")
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tchvw")
 text = "Quit"

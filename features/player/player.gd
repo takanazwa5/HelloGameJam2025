@@ -4,9 +4,6 @@ class_name Player extends CharacterBody2D
 const MAX_SPEED: float = 50.0
 const ACCELERATION: float = 1.0
 
-
-
-
 var pollen: int = 100:
 	set(value):
 		pollen = clampi(value, 0, 100)
