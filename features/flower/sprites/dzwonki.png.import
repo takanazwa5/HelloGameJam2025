@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm74cxn85l2u3"
-path="res://.godot/imported/dzwonki.png-35e0cb17da352d2105555ab4e838b1e0.ctex"
+path="res://.godot/imported/dzwonki.png-d6ba5c7c08453fda2029fd8f6e4d02b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/flowers/dzwonki.png"
-dest_files=["res://.godot/imported/dzwonki.png-35e0cb17da352d2105555ab4e838b1e0.ctex"]
+source_file="res://features/flower/sprites/dzwonki.png"
+dest_files=["res://.godot/imported/dzwonki.png-d6ba5c7c08453fda2029fd8f6e4d02b4.ctex"]
 
 [params]
 

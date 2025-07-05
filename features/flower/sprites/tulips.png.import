@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhd24m1xvqp4"
-path="res://.godot/imported/sunflower.png-0e42f44b926299dd92d5c28028451d72.ctex"
+uid="uid://dntb1alylv7dx"
+path="res://.godot/imported/tulips.png-6297a1c4736870ea706ddf329766c350.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/flowers/sunflower.png"
-dest_files=["res://.godot/imported/sunflower.png-0e42f44b926299dd92d5c28028451d72.ctex"]
+source_file="res://features/flower/sprites/tulips.png"
+dest_files=["res://.godot/imported/tulips.png-6297a1c4736870ea706ddf329766c350.ctex"]
 
 [params]
 
