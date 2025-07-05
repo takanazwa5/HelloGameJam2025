@@ -5,6 +5,8 @@ const MAX_SPEED: float = 50.0
 const ACCELERATION: float = 1.0
 
 
+
+
 var pollen: int = 100:
 	set(value):
 		pollen = clampi(value, 0, 100)
@@ -14,9 +16,9 @@ var pollen: int = 100:
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var ui: UserInterface = %UI
 
-
 func _ready() -> void:
-	pollen = 100
+	pollen = 0
+
 
 
 func _physics_process(_delta: float) -> void:

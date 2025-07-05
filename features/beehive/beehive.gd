@@ -1,1 +1,1 @@
-class_name  bee_hive extends Node2D
+class_name  BeeHive extends Node2D
