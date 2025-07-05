@@ -35,6 +35,23 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	update_map()
 
+	var corrupted_tiles : float = 0.0
+	var normal_tiles : float = 0.0
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+	for x in used_rect.size.x:
+		for y in used_rect.size.y:
+			var current_tile : LevelTileData = map_grid[x][y]
+			match current_tile.tile_type:
+				TileType.NORMAL:
+					normal_tiles += 1.0
+				TileType.CORRUPTED:
+					corrupted_tiles += 1.0
+
+	var ratio = normal_tiles / (used_rect.size.x * used_rect.size.y)
+	print (ratio)
+	Global.ui.pollution_progress.value = remap(ratio, 0.0, 1.0, 0.15, 0.85)
+
+
 func generate_map() -> void:
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
 
