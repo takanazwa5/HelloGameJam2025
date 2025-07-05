@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1l5d1cvorqt5"
-path="res://.godot/imported/ognisko.png-aa7e468f3ac4f479a52e79464b81efa2.ctex"
+path="res://.godot/imported/ognisko.png-10a624267d6a68a00f1a520f5610f043.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/killables/ognisko.png"
-dest_files=["res://.godot/imported/ognisko.png-aa7e468f3ac4f479a52e79464b81efa2.ctex"]
+source_file="res://features/killable/ognisko/ognisko.png"
+dest_files=["res://.godot/imported/ognisko.png-10a624267d6a68a00f1a520f5610f043.ctex"]
 
 [params]
 
