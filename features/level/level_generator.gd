@@ -32,7 +32,7 @@ func _ready() -> void:
 	update_map()
 
 func _process(_delta: float) -> void:
-	pass
+	update_map()
 
 func generate_map() -> void:
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
