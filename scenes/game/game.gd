@@ -10,6 +10,11 @@ const BEEHIVE = preload("res://features/beehive/beehive.tscn")
 var hives = []
 var bees = []
 
+
+func _init() -> void:
+	Global.game = self
+
+
 func _process(_delta: float) -> void:
 	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
 

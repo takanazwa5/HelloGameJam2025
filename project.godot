@@ -14,6 +14,10 @@ config/name="HelloGameJam2025"
 run/main_scene="uid://cq4sqw3tx5fsi"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+Global="*res://autoload/global.gd"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=1
