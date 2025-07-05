@@ -60,16 +60,16 @@ func _level_up() -> void:
 		6:
 			pipe.show()
 			pipe_slow.disabled = false
-			corruption_timer.wait_time = 5.5
+			corruption_timer.wait_time = 4.75
 
 			tween_progress_value(73.0)
 		7:
-			corruption_timer.wait_time = 4.0
+			corruption_timer.wait_time = 2.75
 
 			tween_progress_value(85.0)
 
 		8:
-			corruption_timer.wait_time = 2.5
+			corruption_timer.wait_time = 0.75
 
 			tween_progress_value(100.0)
 
