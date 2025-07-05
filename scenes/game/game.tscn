@@ -1,59 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
+[ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://b2a1nh3d2xlrx" path="res://features/flower/flower.tscn" id="3_0sr1o"]
 
-[sub_resource type="GDScript" id="GDScript_7h61r"]
-resource_name = "Game"
-script/source = "class_name Game extends Node
-
-
-@onready var level: LevelGenerator = %Level
-@onready var player: Player = %Player
-
-const BEE = preload(\"res://features/Bee/worker_bee.tscn\")
-const BEEHIVE = preload(\"res://features/beehive/beehive.tscn\")
-
-var hives = []
-var bees = []
-
-func _process(_delta: float) -> void:
-	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
-	level.set_tile(LevelGenerator.TileType.NORMAL,player_tile.x, player_tile.y)
-	#print(\"player tile: %s\" % player_tile)
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(&\"SpawnBee\"):
-		var new_bee = BEE.instantiate()
-		add_child(new_bee)
-		new_bee.position = player.position
-
-		var best_hive : BeeHive = null
-		var best_distance : float = INF
-
-		for hive in hives:
-			var dist = new_bee.position.distance_to(hive.position)
-			if dist < best_distance:
-				best_distance = dist
-				best_hive = hive
-
-		new_bee.set_home(best_hive)
-		new_bee.set_game(self)
-
-		bees.append(new_bee)
-
-	if event.is_action_pressed(&\"SpawnBeeHive\"):
-		var new_bee_hive = BEEHIVE.instantiate()
-		add_child(new_bee_hive)
-		new_bee_hive.position = player.position;
-
-		hives.append(new_bee_hive)
-"
-
 [node name="Game" type="Node"]
-script = SubResource("GDScript_7h61r")
+script = ExtResource("1_kelw5")
 
 [node name="Level" parent="." instance=ExtResource("1_7h61r")]
 unique_name_in_owner = true
