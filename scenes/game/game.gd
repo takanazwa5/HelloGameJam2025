@@ -4,11 +4,13 @@ class_name Game extends Node2D
 @onready var level: LevelGenerator = %Level
 @onready var player: Player = %Player
 
-const BEE = preload("res://features/Bee/worker_bee.tscn")
-const BEEHIVE = preload("res://features/beehive/beehive.tscn")
+const BEE: PackedScene = preload("res://features/Bee/worker_bee.tscn")
+const BEEHIVE: PackedScene = preload("res://features/beehive/beehive.tscn")
 
-var hives = []
-var bees = []
+
+var bee_cost: int = 10
+var hives: Array = []
+var bees: Array = []
 
 
 func _init() -> void:
@@ -26,30 +28,45 @@ func _process(_delta: float) -> void:
 	#print("player tile: %s" % player_tile)
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"SpawnBee") && hives.size() > 0:
-		var new_bee = BEE.instantiate()
-		add_child(new_bee)
-		new_bee.position = player.position
-
-		var best_hive : BeeHive = null
-		var best_distance : float = INF
-
-		for hive in hives:
-			var dist = new_bee.position.distance_to(hive.position)
-			if dist < best_distance:
-				best_distance = dist
-				best_hive = hive
-
-		new_bee.set_home(best_hive)
-		new_bee.level = level
-		new_bee.game = self
-
-		bees.append(new_bee)
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"SpawnBee"):
+		_spawn_bee()
 
 	if event.is_action_pressed(&"SpawnBeeHive"):
-		var new_bee_hive = BEEHIVE.instantiate()
-		add_child(new_bee_hive)
-		new_bee_hive.position = player.position;
+		_spawn_beehive()
 
-		hives.append(new_bee_hive)
+
+func _spawn_bee() -> void:
+	if player.honey < bee_cost or hives.is_empty(): return
+
+	player.honey -= bee_cost
+	bee_cost += 5
+	var new_bee = BEE.instantiate()
+	add_child(new_bee)
+	new_bee.position = player.position
+
+	var best_hive : BeeHive = null
+	var best_distance : float = INF
+
+	for hive in hives:
+		var dist = new_bee.position.distance_to(hive.position)
+		if dist < best_distance:
+			best_distance = dist
+			best_hive = hive
+
+	new_bee.set_home(best_hive)
+	new_bee.level = level
+	new_bee.game = self
+
+	bees.append(new_bee)
+
+
+func _spawn_beehive() -> void:
+	if player.honey < 50:
+		return
+
+	player.honey -= 50
+	var new_bee_hive = BEEHIVE.instantiate()
+	add_child(new_bee_hive)
+	new_bee_hive.position = player.position;
+	hives.append(new_bee_hive)
