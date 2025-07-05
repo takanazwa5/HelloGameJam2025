@@ -13,7 +13,6 @@ config_version=5
 config/name="HelloGameJam2025"
 run/main_scene="uid://cq4sqw3tx5fsi"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [debug]
 
