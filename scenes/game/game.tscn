@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
-[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_kelw5"]
+[ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://b2a1nh3d2xlrx" path="res://features/flower/flower.tscn" id="3_0sr1o"]
 

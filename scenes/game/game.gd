@@ -33,6 +33,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		new_bee.set_home(best_hive)
 		new_bee.level = level
+		new_bee.game = self
 
 		bees.append(new_bee)
 
