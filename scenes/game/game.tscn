@@ -29,6 +29,18 @@ func _unhandled_input(event: InputEvent) -> void:
 		add_child(new_bee)
 		new_bee.position = player.position
 
+		var best_hive : BeeHive = null
+		var best_distance : float = INF
+
+		for hive in hives:
+			var dist = new_bee.position.distance_to(hive.position)
+			if dist < best_distance:
+				best_distance = dist
+				best_hive = hive
+
+		new_bee.set_home(best_hive)
+		new_bee.set_game(self)
+
 		bees.append(new_bee)
 
 	if event.is_action_pressed(&\"SpawnBeeHive\"):
