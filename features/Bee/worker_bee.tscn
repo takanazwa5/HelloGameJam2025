@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://k3gkv74rbagu" path="res://features/Bee/worker_bee.gd" id="1_1tbwd"]
 [ext_resource type="Texture2D" uid="uid://vtt7em3y0o2l" path="res://features/beehive/bee_small.png" id="2_1tbwd"]
-[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/shadow.png" id="3_77wol"]
-[ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_fdg3g"]
+[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/drzewo/shadow.png" id="3_77wol"]
+[ext_resource type="Script" path="res://features/Bee/bee_animation.gd" id="3_fdg3g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbwd"]
 atlas = ExtResource("2_1tbwd")

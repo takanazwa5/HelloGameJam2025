@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jp7k3lkremx1"
-path="res://.godot/imported/kamien1.png-cd35294e2c66b4ce84b4626f200965d9.ctex"
+uid="uid://dh2ne3yttjtbf"
+path="res://.godot/imported/drzewo.png-12da19ee582e3a8686931cb6dc9fa36b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/obstacles/kamien1.png"
-dest_files=["res://.godot/imported/kamien1.png-cd35294e2c66b4ce84b4626f200965d9.ctex"]
+source_file="res://features/obstacles/drzewo/drzewo.png"
+dest_files=["res://.godot/imported/drzewo.png-12da19ee582e3a8686931cb6dc9fa36b.ctex"]
 
 [params]
 
