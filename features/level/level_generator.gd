@@ -27,7 +27,7 @@ var size_y: int = 10
 
 func _ready() -> void:
 	generate_map()
-	update_map()
+	# update_map()
 
 func _process(_delta: float) -> void:
 	pass
@@ -72,3 +72,7 @@ func get_tile_index(tile_type : TileType) -> int:
 		return 0
 	else:
 		return 1
+
+func get_alternative_id(tile_id: int):
+	if tile_id == 2:
+		return 11
