@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=7 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b2a1nh3d2xlrx" path="res://features/flower/flower.tscn" id="3_0sr1o"]
 [ext_resource type="PackedScene" uid="uid://djc7dma5fwyrk" path="res://features/killable/kosiara/kosiara.tscn" id="5_5i0tg"]
 [ext_resource type="PackedScene" uid="uid://c71c4f8mgpjkw" path="res://features/killable/ognisko/ognisko.tscn" id="6_bdhmt"]
-[ext_resource type="PackedScene" uid="uid://wugdxaccemxi" path="res://features/factory/factory.tscn" id="7_bdhmt"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -34,6 +33,3 @@ position = Vector2(172, 299)
 
 [node name="Ognisko" parent="Killables" instance=ExtResource("6_bdhmt")]
 position = Vector2(90, 330)
-
-[node name="Factory" parent="." instance=ExtResource("7_bdhmt")]
-position = Vector2(290, 308)

@@ -23,6 +23,7 @@ radius = 118.152
 radius = 139.291
 
 [node name="Factory" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_4ugtf")
 
 [node name="Timer" type="Timer" parent="."]
