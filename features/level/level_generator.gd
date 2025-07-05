@@ -50,7 +50,7 @@ func update_map() -> void:
 	for x: int in used_rect.size.x:
 		for y: int in used_rect.size.y:
 			var current_tile : LevelTileData = map_grid[x][y]
-			tilemap_layer.set_cell(Vector2(x, y), get_tile_type(current_tile.tile_type), Vector2i(0, 0))
+			tilemap_layer.set_cell(Vector2(x, y), current_tile.tile_index, Vector2i(0, 0))
 
 func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 	var current_tile : LevelTileData = map_grid[pos_x][pos_y]
