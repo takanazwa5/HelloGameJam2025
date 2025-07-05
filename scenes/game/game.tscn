@@ -1,11 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=4 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 
+[sub_resource type="GDScript" id="GDScript_7h61r"]
+resource_name = "Game"
+script/source = "class_name Game extends Node
+
+
+@onready var level: LevelGenerator = %Level
+@onready var player: Player = %Player
+
+
+func _process(_delta: float) -> void:
+	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
+	level.set_tile(LevelGenerator.TileType.GRASS,player_tile.x, player_tile.y)
+	#print(\"player tile: %s\" % player_tile)
+"
+
 [node name="Game" type="Node"]
+script = SubResource("GDScript_7h61r")
 
 [node name="Level" parent="." instance=ExtResource("1_7h61r")]
+unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("1_sul5r")]
+unique_name_in_owner = true
 position = Vector2(160, 90)
