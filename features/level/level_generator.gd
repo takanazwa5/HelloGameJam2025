@@ -1,5 +1,4 @@
-class_name LevelGenerator
-extends Node2D
+class_name LevelGenerator extends Node2D
 
 
 @onready var tilemap_layer : TileMapLayer = $TileMapLayer
