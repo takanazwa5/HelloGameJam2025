@@ -8,9 +8,10 @@ var home_hive : BeeHive
 var target_pos : Vector2i
 var fixed_tile : bool = true
 
-var wait_timer = 0.0
-var work_timer = 0.0
-var working = false
+var wait_timer : float = 0.0
+var work_timer : float = 0.0
+var working : bool = false
+var gathered_honey : bool = false
 
 func _process(delta: float) -> void:
 	if wait_timer > 0.0:
@@ -19,12 +20,13 @@ func _process(delta: float) -> void:
 
 	if work_timer > 0.0:
 		work_timer -= delta
-
 		return
 
 	if working:
 		working = false
-		level.set_tile(LevelGenerator.TileType.NORMAL, target_pos.x / 16, target_pos.y / 16)
+		if level.get_tile(target_pos.x / 16, target_pos. y/ 16) == LevelGenerator.TileType.CORRUPTED:
+			level.set_tile(LevelGenerator.TileType.NORMAL, target_pos.x / 16, target_pos.y / 16)
+			gathered_honey = true
 
 	var current_destination = Vector2(0, 0)
 	if fixed_tile:
@@ -41,6 +43,8 @@ func _process(delta: float) -> void:
 		if fixed_tile:
 			target_pos = get_best_tile()
 			wait_timer = 1.0
+			if gathered_honey:
+				game.player.honey += 1
 		else:
 			work_timer = 0.5
 			working = true
