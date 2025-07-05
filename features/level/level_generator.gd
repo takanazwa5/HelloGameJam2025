@@ -41,7 +41,7 @@ func generate_map() -> void:
 		map_grid.append([])
 		for y: int in used_rect.size.y:
 			var tile_id : int = tilemap_layer.get_cell_source_id(Vector2i(x, y))
-			var new_tile_data: LevelTileData = LevelTileData.new(x, y, TileType.GRASS, tile_id)
+			var new_tile_data: LevelTileData = LevelTileData.new(x, y, TileType.CORRUPTED, tile_id)
 			map_grid[x].append(new_tile_data)
 
 
