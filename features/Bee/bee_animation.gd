@@ -12,7 +12,7 @@ func _ready() -> void:
 	change_state()
 
 
-func change_state():
+func change_state() -> void:
 	var tween = get_tree().create_tween()
 
 	moving_down = !moving_down

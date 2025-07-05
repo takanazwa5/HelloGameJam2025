@@ -13,7 +13,8 @@ func _ready() -> void:
 
 func _on_kill_zone_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print("player entered wiatrak killzone (TBD)")
+		print("player entered wiatrak killzone")
+		body.die()
 
 
 func _on_gravity_zone_body_entered(body: Node2D) -> void:

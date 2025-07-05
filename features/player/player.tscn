@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lqdijs65lcw0" path="res://features/player/player.gd" id="1_sjcu7"]
 [ext_resource type="Texture2D" uid="uid://d22jyfu7uavye" path="res://features/player/player.png" id="2_fcb3x"]
-[ext_resource type="Script" path="res://features/Bee/bee_animation.gd" id="3_6xbq4"]
+[ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_6xbq4"]
 [ext_resource type="PackedScene" uid="uid://dew7m6ikx6mwt" path="res://features/game_user_interface/user_interface.tscn" id="3_emvbc"]
 [ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/drzewo/shadow.png" id="4_i250s"]
 
@@ -62,7 +62,8 @@ script = ExtResource("3_6xbq4")
 modulate = Color(1, 1, 1, 0.470588)
 texture = ExtResource("4_i250s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_ao3hl")
 
