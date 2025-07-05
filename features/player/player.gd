@@ -25,6 +25,10 @@ var honey: int = 0:
 @onready var ui: UserInterface = %UI
 
 
+func _init() -> void:
+	Global.player = self
+
+
 func _ready() -> void:
 	pollen = 0
 	honey = 0
@@ -32,7 +36,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	var mouse_pos: Vector2 = get_global_mouse_position()
 	var direction: Vector2 = Vector2(mouse_pos - position).normalized()
-
 
 	velocity.x = move_toward(velocity.x, direction.x * SPEED * speed_modifier, ACCELERATION)
 	velocity.y = move_toward(velocity.y, direction.y * SPEED * speed_modifier, ACCELERATION)
