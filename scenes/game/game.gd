@@ -19,8 +19,10 @@ func _process(_delta: float) -> void:
 	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
 
 	if level.get_tile(player_tile.x, player_tile.y) == LevelGenerator.TileType.CORRUPTED:
-		level.set_tile(LevelGenerator.TileType.NORMAL, player_tile.x, player_tile.y)
-		player.honey += 1
+		if player.pollen > 0:
+			level.set_tile(LevelGenerator.TileType.NORMAL, player_tile.x, player_tile.y)
+			player.honey += 1
+			player.pollen -= 1
 	#print("player tile: %s" % player_tile)
 
 

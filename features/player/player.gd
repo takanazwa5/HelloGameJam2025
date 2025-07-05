@@ -3,6 +3,8 @@ class_name Player extends CharacterBody2D
 
 const SPEED: float = 50.0
 const ACCELERATION: float = 1.0
+const STARTING_POLLEN: int = 50
+const STARTING_HONEY: int = 0
 
 
 var can_move: bool = true
@@ -33,8 +35,8 @@ func _init() -> void:
 
 
 func _ready() -> void:
-	pollen = 0
-	honey = 0
+	pollen = STARTING_POLLEN
+	honey = STARTING_HONEY
 
 func _physics_process(_delta: float) -> void:
 	var mouse_pos: Vector2 = get_global_mouse_position()
