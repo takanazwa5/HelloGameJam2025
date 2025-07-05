@@ -4,7 +4,7 @@ class_name LevelGenerator extends Node2D
 @onready var tilemap_layer : TileMapLayer = $TileMapLayer
 
 enum TileType {
-	GRASS,
+	NORMAL,
 	CORRUPTED,
 }
 
@@ -12,7 +12,7 @@ enum TileType {
 class LevelTileData:
 	var pos_x: int = 0
 	var pos_y: int = 0
-	var tile_type: TileType = TileType.GRASS
+	var tile_type: TileType = TileType.NORMAL
 	var tile_index: int = 0
 
 	func _init(arg_pos_x : int, arg_pos_y : int, arg_tile_type : TileType, arg_tile_index : int) -> void:
@@ -70,21 +70,21 @@ func set_tile(tile_type : TileType, pos_x : int, pos_y : int) -> void:
 
 func get_tile_type(index : int) -> int:
 	if index == 1:
-		return TileType.GRASS
+		return TileType.NORMAL
 	if index == 0:
 		return TileType.CORRUPTED
 	else:
 		return 1
 
 func get_tile_index(tile_type : TileType) -> int:
-	if tile_type == TileType.GRASS:
+	if tile_type == TileType.NORMAL:
 		return 1
 	elif tile_type == TileType.CORRUPTED:
 		return 0
 	else:
 		return 1
 
-var tile_alternatives = {
+var tile_alternatives: Dictionary[int, int] = {
 	# Grass
 	2: 11,
 	3: 12,
