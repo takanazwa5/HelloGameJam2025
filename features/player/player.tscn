@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d22jyfu7uavye" path="res://features/player/player.png" id="2_fcb3x"]
 [ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_6xbq4"]
 [ext_resource type="PackedScene" uid="uid://dew7m6ikx6mwt" path="res://features/game_user_interface/user_interface.tscn" id="3_emvbc"]
-[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/drzewo/shadow.png" id="4_i250s"]
+[ext_resource type="Texture2D" uid="uid://cnxasxo63rahy" path="res://features/obstacles/shadow.png" id="4_i250s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcb3x"]
 atlas = ExtResource("2_fcb3x")
@@ -59,7 +59,7 @@ offset = Vector2(0, -7.685)
 script = ExtResource("3_6xbq4")
 
 [node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.470588)
+modulate = Color(1, 1, 1, 0.25098)
 texture = ExtResource("4_i250s")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
