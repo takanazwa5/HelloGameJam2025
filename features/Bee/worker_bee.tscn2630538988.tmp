@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6bfml3ty40rv"]
+[gd_scene load_steps=11 format=3 uid="uid://b6bfml3ty40rv"]
 
 [ext_resource type="Script" uid="uid://k3gkv74rbagu" path="res://features/Bee/worker_bee.gd" id="1_1tbwd"]
 [ext_resource type="Texture2D" uid="uid://vtt7em3y0o2l" path="res://features/beehive/bee_small.png" id="2_1tbwd"]
 [ext_resource type="Script" uid="uid://cggxwuxy8x86u" path="res://features/Bee/bee_animation.gd" id="3_fdg3g"]
+[ext_resource type="Shader" uid="uid://d0vupgyjse18e" path="res://features/Bee/shadow.gdshader" id="4_22or3"]
 [ext_resource type="Texture2D" uid="uid://cnxasxo63rahy" path="res://features/obstacles/shadow.png" id="4_fdg3g"]
 [ext_resource type="Script" uid="uid://cauh60fyu5gcs" path="res://features/Bee/shadow.gd" id="6_84pwg"]
 
@@ -28,6 +29,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_84pwg"]
+shader = ExtResource("4_22or3")
+
 [node name="WorkerBee" type="Node2D"]
 script = ExtResource("1_1tbwd")
 
@@ -40,8 +44,9 @@ offset = Vector2(0, -5)
 script = ExtResource("3_fdg3g")
 
 [node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.25)
+self_modulate = Color(1, 1, 1, 0.25)
 z_index = 1
+material = SubResource("ShaderMaterial_84pwg")
 texture = ExtResource("4_fdg3g")
 script = ExtResource("6_84pwg")
 
