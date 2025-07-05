@@ -1,5 +1,6 @@
 class_name WorkerBee extends Node2D
 
+var level : LevelGenerator
 var game : Game
 
 var speed : float = 25
@@ -22,17 +23,18 @@ func _process(delta: float) -> void:
 
 	if position.distance_to(current_destination) < 0.1:
 		if fixed_tile:
-			target_pos = Vector2.ZERO
+			target_pos = get_best_tile()
+		else:
+			level.set_tile(LevelGenerator.TileType.NORMAL, target_pos.x / 16, target_pos.y / 16)
+
+		fixed_tile = !fixed_tile
+
 
 func get_best_tile():
-	LevelGenerator.get
-
+	return level.get_best_tile_for_bee(self, game.bees)
 
 func set_home(home : BeeHive):
 	home_hive = home
-
-func set_game(game : Game):
-	self.game = game
 
 func update_target(pos : Vector2i):
 	target_pos = pos
