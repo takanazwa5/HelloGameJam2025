@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8n517sc0drjs"]
+
+[ext_resource type="Script" uid="uid://bgyu8qh3xqrkj" path="res://features/obstacles/wiatrak/wiatrak.gd" id="1_ip3tl"]
+[ext_resource type="Texture2D" uid="uid://dpoagjc13n0af" path="res://features/obstacles/wiatrak/wiatrak.png" id="2_qdrvp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0d32"]
+atlas = ExtResource("2_qdrvp")
+region = Rect2(0, 0, 35, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uim2f"]
+atlas = ExtResource("2_qdrvp")
+region = Rect2(35, 0, 35, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqveb"]
+atlas = ExtResource("2_qdrvp")
+region = Rect2(70, 0, 35, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s4gdp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0d32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uim2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqveb")
+}],
+"loop": true,
+"name": &"wiatrak",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nbm73"]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xt03p"]
+radius = 52.0096
+
+[node name="Wiatrak" type="Node2D"]
+script = ExtResource("1_ip3tl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s4gdp")
+animation = &"wiatrak"
+autoplay = "wiatrak"
+frame_progress = 0.686709
+
+[node name="KillZone" type="Area2D" parent="."]
+unique_name_in_owner = true
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, -18)
+shape = SubResource("CircleShape2D_nbm73")
+
+[node name="GravityZone" type="Area2D" parent="."]
+unique_name_in_owner = true
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityZone"]
+position = Vector2(0, -18)
+shape = SubResource("CircleShape2D_xt03p")
