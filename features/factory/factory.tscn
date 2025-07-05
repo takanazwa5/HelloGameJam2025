@@ -8,19 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://bpsydxm2g8b6k" path="res://features/factory/sprites/Storage10x6.png" id="6_xkw0e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_berpe"]
-radius = 164.012
+radius = 120.067
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_katje"]
-radius = 164.012
+radius = 121.334
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yb8go"]
-radius = 164.012
+radius = 119.105
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkw0e"]
-radius = 164.012
+radius = 118.152
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m38e2"]
-radius = 164.012
+radius = 139.291
 
 [node name="Factory" type="Node2D"]
 script = ExtResource("1_4ugtf")
