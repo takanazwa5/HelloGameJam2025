@@ -17,7 +17,7 @@ var speed_modifier: float = 1.0:
 var pollen: int = 100:
 	set(value):
 		pollen = clampi(value, 0, 100)
-		ui.pollen_label.text = "Pollen: %s" % pollen
+		ui.pollen_label.text = str(snapped(pollen, 0.1)) + "%"
 
 		var tween = get_tree().create_tween()
 		tween.tween_property(ui.pollen_progress, ^"value", pollen, 0.1)

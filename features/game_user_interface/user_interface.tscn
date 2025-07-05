@@ -1,17 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dew7m6ikx6mwt"]
+[gd_scene load_steps=10 format=3 uid="uid://dew7m6ikx6mwt"]
 
 [ext_resource type="Script" uid="uid://xix6b1ncpie3" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_eg8ul"]
 [ext_resource type="Texture2D" uid="uid://hulq0m426efc" path="res://Textures/ui/pasek trudności/difficultybar-empty.png" id="3_gbwgi"]
 [ext_resource type="Texture2D" uid="uid://7xq3vj480ghu" path="res://Textures/ui/pasek trudności/difficultybar-full.png" id="4_o3qup"]
 [ext_resource type="Texture2D" uid="uid://cayubgaouqgc" path="res://Textures/ui/pasek pyłku/pollenbar-empty.png" id="5_jvitl"]
+[ext_resource type="Texture2D" uid="uid://bn2jlqjrxe6n5" path="res://Textures/ui/pasek zepsucia/pollutionbar-bad.png" id="5_k8eol"]
 [ext_resource type="Texture2D" uid="uid://bkg3wtg3epa55" path="res://Textures/ui/pasek pyłku/pollenbar-full.png" id="6_lpmk0"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_pw3wt"]
-font = ExtResource("2_eg8ul")
-font_size = 12
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://bn0crehgvtbty" path="res://Textures/ui/pasek zepsucia/pollutionbar-good.png" id="6_pvfrv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eg8ul"]
 load_path = "res://.godot/imported/2difficultybar-empty.png-f9a9a46f3c24471aab75180e0a44f23d.ctex"
@@ -27,8 +23,10 @@ script = ExtResource("1_s88id")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 53.0
-offset_bottom = 19.0
+offset_left = -12.0
+offset_top = 60.0
+offset_right = 41.0
+offset_bottom = 79.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -38,15 +36,19 @@ theme_override_constants/margin_bottom = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
-text = "Pollen:"
-label_settings = SubResource("LabelSettings_pw3wt")
+theme_override_font_sizes/font_size = 7
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HoneyContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-offset_top = 16.0
-offset_right = 53.0
-offset_bottom = 45.0
+offset_left = 16.0
+offset_top = 3.0
+offset_right = 69.0
+offset_bottom = 32.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -55,16 +57,42 @@ theme_override_constants/margin_bottom = 5
 [node name="Honeylabel" type="Label" parent="HoneyContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_font_sizes/font_size = 7
 text = "Honey:"
-label_settings = SubResource("LabelSettings_pw3wt")
+
+[node name="LevelLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 303.0
+offset_top = 64.0
+offset_right = 315.0
+offset_bottom = 81.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_font_sizes/font_size = 7
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PollutionLabel" type="Label" parent="."]
+offset_left = 153.0
+offset_top = -1.0
+offset_right = 171.0
+offset_bottom = 16.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_font_sizes/font_size = 7
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LevelContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-offset_left = 295.56
-offset_top = 4.0
-offset_right = 317.56
-offset_bottom = 80.0
+offset_left = 297.0
+offset_top = 3.0
+offset_right = 319.0
+offset_bottom = 79.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -82,12 +110,30 @@ fill_mode = 3
 texture_under = ExtResource("3_gbwgi")
 texture_progress = ExtResource("4_o3qup")
 
+[node name="PollutionContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 204.0
+offset_bottom = 74.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PollutionProgressBar" type="TextureProgressBar" parent="PollutionContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.4
+texture_under = ExtResource("5_k8eol")
+texture_progress = ExtResource("6_pvfrv")
+
 [node name="PollenContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-offset_left = 283.0
-offset_top = 4.0
-offset_right = 305.0
-offset_bottom = 73.0
+offset_left = 3.0
+offset_right = 25.0
+offset_bottom = 69.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -105,3 +151,22 @@ value = 25.5
 fill_mode = 3
 texture_under = ExtResource("5_jvitl")
 texture_progress = ExtResource("6_lpmk0")
+
+[node name="BeeContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 70.0
+offset_bottom = 38.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BeeLabel" type="Label" parent="BeeContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_font_sizes/font_size = 7
+text = "Bees: 0"

@@ -40,6 +40,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"SpawnBee"):
 		_spawn_bee()
 
+		Global.ui.bee_label.text = "Bees: %s" % bees.size()
+
 	if event.is_action_pressed(&"SpawnBeeHive"):
 		_spawn_beehive()
 
