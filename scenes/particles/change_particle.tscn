@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1smaoberxra"]
+
+[ext_resource type="Texture2D" uid="uid://5rrrrofsb8vn" path="res://Textures/particle/base_particles.png" id="1_dpwmm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2a8rs"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_dpwmm"]
+_data = [Vector2(0, 0.507172), 0.0, 0.0, 0, 0, Vector2(0.986807, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+material = SubResource("CanvasItemMaterial_2a8rs")
+position = Vector2(-96, -15)
+emitting = false
+amount = 4
+texture = ExtResource("1_dpwmm")
+lifetime = 0.1
+one_shot = true
+explosiveness = 0.2
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+scale_amount_curve = SubResource("Curve_dpwmm")

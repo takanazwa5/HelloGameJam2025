@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2a1nh3d2xlrx"]
 
 [ext_resource type="Script" uid="uid://lprfsucow2" path="res://features/flower/flower.gd" id="1_b3cnq"]
-[ext_resource type="Texture2D" uid="uid://dm74cxn85l2u3" path="res://features/flower/sprites/dzwonki.png" id="2_rr165"]
+[ext_resource type="Texture2D" uid="uid://dntb1alylv7dx" path="res://features/flower/sprites/tulips.png" id="2_rr165"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rr165"]
 size = Vector2(16, 16)
@@ -15,13 +15,16 @@ script = ExtResource("1_b3cnq")
 
 [node name="Collision16" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_rr165")
-disabled = true
 
 [node name="Collision32" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_j2ckb")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 texture = ExtResource("2_rr165")
+offset = Vector2(0, -7.11)

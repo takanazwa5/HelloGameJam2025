@@ -12,6 +12,9 @@ var wait_timer : float = 0.0
 var work_timer : float = 0.0
 var working : bool = false
 var gathered_honey : bool = false
+
+@onready var main_sprite : AnimatedSprite2D = $Sprite2D
+
 @onready var death_timer : Timer = $DeathTimer
 
 func _ready() -> void:
@@ -35,6 +38,17 @@ func _process(delta: float) -> void:
 		if level.get_tile(target_pos.x / 16, target_pos. y/ 16) == LevelGenerator.TileType.CORRUPTED:
 			level.set_tile(LevelGenerator.TileType.NORMAL, target_pos.x / 16, target_pos.y / 16)
 			gathered_honey = true
+			var particles = load("res://scenes/particles/change_particle.tscn")
+
+			var new_partciles = particles.instantiate()
+			Global.game.add_child(new_partciles)
+			new_partciles.position = Vector2(target_pos.x, target_pos.y)
+			new_partciles.restart()
+
+			var tween = get_tree().create_tween()
+			tween.tween_property(main_sprite, ^"rotation_degrees", 25, 0.1)
+			tween.chain().tween_property(main_sprite, ^"rotation_degrees", 0, 0.1)
+			# tween.tween_property(main_sprite, ^"rotation_degrees", 0, 0.1)
 
 	var current_destination = Vector2(0, 0)
 	if fixed_tile:
@@ -56,6 +70,9 @@ func _process(delta: float) -> void:
 			wait_timer = 0.5
 			if gathered_honey:
 				game.player.honey += 1
+				var tween = get_tree().create_tween()
+				tween.tween_property(main_sprite, ^"rotation_degrees", 25, 0.1)
+				tween.chain().tween_property(main_sprite, ^"rotation_degrees", 0, 0.1)
 		else:
 			work_timer = 0.25
 			working = true

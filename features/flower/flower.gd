@@ -25,6 +25,10 @@ func _init() -> void:
 func _ready() -> void:
 	_randomize_flower()
 
+	sprite_2d.scale = Vector2(1, 0)
+	var tween = get_tree().create_tween()
+	tween.tween_property(sprite_2d, ^"scale", Vector2(1, 1), 0.2)
+
 
 func _randomize_flower() -> void:
 	sprite_2d.texture = [DZWONKI, SUNFLOWER, TULIPS, WRZOSY].pick_random()
