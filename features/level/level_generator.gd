@@ -3,6 +3,9 @@ class_name LevelGenerator extends Node2D
 
 @onready var tilemap_layer : TileMapLayer = $TileMapLayer
 
+@onready var flower_scene = preload("res://features/flower/flower.tscn")
+@onready var flower_spawn_timer = $FlowerSpawnTimer
+
 enum TileType {
 	NORMAL,
 	CORRUPTED,
@@ -25,16 +28,47 @@ class LevelTileData:
 
 var map_grid: Array = []
 
+var flowers: Array = []
+
 var size_x: int = 10
 var size_y: int = 10
 
 func _ready() -> void:
 	generate_map()
 	update_map()
+	flower_spawn_timer.timeout.connect(_spawn_flower)
 
 func _process(_delta: float) -> void:
 	update_map()
+	update_pollution_progress()
 
+func _spawn_flower():
+	var used_rect : Rect2i = tilemap_layer.get_used_rect()
+	var normal_tiles = []
+
+	for x in used_rect.size.x:
+		for y in used_rect.size.y:
+			var current_tile : LevelTileData = map_grid[x][y]
+			if current_tile.tile_type == TileType.NORMAL:
+				normal_tiles.append(current_tile)
+
+	var rng = RandomNumberGenerator.new()
+	var random_tile = normal_tiles[rng.randi_range(0, normal_tiles.size() - 1)]
+	for flower in flowers:
+		if flower == null:
+			continue
+
+		if flower.position.x == random_tile.pos_x * 16 && flower.position.y == random_tile.pos_y * 16:
+			return
+
+	var new_flower = flower_scene.instantiate()
+	Global.game.add_child(new_flower)
+	new_flower.position = Vector2(random_tile.pos_x * 16, random_tile.pos_y * 16)
+	flowers.append(new_flower)
+
+
+
+func update_pollution_progress():
 	var corrupted_tiles : float = 0.0
 	var normal_tiles : float = 0.0
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
@@ -51,7 +85,6 @@ func _process(_delta: float) -> void:
 	#print (ratio)
 	Global.ui.pollution_progress.value = remap(ratio, 0.0, 1.0, 0.15, 0.85)
 	Global.ui.pollution_label.text = str(snapped(ratio * 100, 0.1)) + "%"
-
 
 func generate_map() -> void:
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
