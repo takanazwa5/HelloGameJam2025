@@ -47,3 +47,8 @@ script = ExtResource("6_84pwg")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 remote_path = NodePath("../Shadow")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true

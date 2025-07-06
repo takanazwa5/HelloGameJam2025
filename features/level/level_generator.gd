@@ -168,6 +168,9 @@ func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
 
 				var bad_pos = false
 				for current_bee in bee_array:
+					if !is_instance_valid(current_bee):
+						continue
+
 					if Vector2(current_bee.target_pos.x, current_bee.target_pos.y) == Vector2(tile_world_pos.x, tile_world_pos.y):
 						bad_pos = true
 

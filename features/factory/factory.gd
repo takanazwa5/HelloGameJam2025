@@ -71,7 +71,7 @@ func _level_up() -> void:
 			tween_progress_value(85.0)
 
 		8:
-			corruption_timer.wait_time = 0.05
+			corruption_timer.wait_time = 0.025
 
 			tween_progress_value(100.0)
 

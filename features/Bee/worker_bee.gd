@@ -3,7 +3,7 @@ class_name WorkerBee extends Node2D
 var level : LevelGenerator
 var game : Game
 
-var speed : float = 40
+var speed : float = 35
 var home_hive : BeeHive
 var target_pos : Vector2i
 var fixed_tile : bool = true
@@ -12,6 +12,13 @@ var wait_timer : float = 0.0
 var work_timer : float = 0.0
 var working : bool = false
 var gathered_honey : bool = false
+@onready var death_timer : Timer = $DeathTimer
+
+func _ready() -> void:
+	death_timer.timeout.connect(handle_death)
+
+func handle_death():
+	queue_free()
 
 func _process(delta: float) -> void:
 	if wait_timer > 0.0:
@@ -45,11 +52,11 @@ func _process(delta: float) -> void:
 	if position.distance_to(current_destination) < 0.1:
 		if fixed_tile:
 			target_pos = get_best_tile()
-			wait_timer = 0.5
+			wait_timer = 1.00
 			if gathered_honey:
 				game.player.honey += 1
 		else:
-			work_timer = 0.25
+			work_timer = 0.5
 			working = true
 
 		fixed_tile = !fixed_tile
