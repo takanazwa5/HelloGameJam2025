@@ -1,15 +1,23 @@
-[gd_scene load_steps=35 format=3 uid="uid://s53od2t0e16i"]
+[gd_scene load_steps=43 format=3 uid="uid://s53od2t0e16i"]
 
 [ext_resource type="Script" uid="uid://dsn3qfx5wi8gf" path="res://features/factory/factory.gd" id="1_uafm3"]
 [ext_resource type="Texture2D" uid="uid://g4q87ae1mjal" path="res://features/factory/sprites/1Workshop8x4.png" id="1_wmn7x"]
+[ext_resource type="AudioStream" uid="uid://dgt636pka4qsd" path="res://audio/MusicPart1.mp3" id="2_dj362"]
 [ext_resource type="Texture2D" uid="uid://ca160wvv5xb75" path="res://features/factory/sprites/Administration2x3.png" id="2_kc2j5"]
+[ext_resource type="AudioStream" uid="uid://i1rh62inaxd0" path="res://audio/MusicPart2.mp3" id="3_4vs5r"]
 [ext_resource type="Texture2D" uid="uid://barjhjwkm2hdj" path="res://features/factory/sprites/Administration4x6.png" id="3_r6h67"]
 [ext_resource type="Texture2D" uid="uid://dyxq4trxfflr8" path="res://features/factory/sprites/BaseStation3x3.png" id="4_12npm"]
+[ext_resource type="AudioStream" uid="uid://dm16cisb5awrd" path="res://audio/MusicPart3.mp3" id="4_ebsm0"]
 [ext_resource type="Texture2D" uid="uid://bb78m65bmwsqy" path="res://features/factory/sprites/BaseStation6x6.png" id="5_k6v2a"]
+[ext_resource type="AudioStream" uid="uid://cyjx8b6i4kva3" path="res://audio/MusicPart4.mp3" id="5_x5ftp"]
 [ext_resource type="Texture2D" uid="uid://dw568tipc2fux" path="res://features/factory/sprites/Pipe4x3.png" id="6_gatr5"]
+[ext_resource type="AudioStream" uid="uid://dcclrpxm6chw4" path="res://audio/MusicPart5.mp3" id="6_hxu8d"]
 [ext_resource type="Texture2D" uid="uid://bpsydxm2g8b6k" path="res://features/factory/sprites/Storage10x6.png" id="7_kc2j5"]
+[ext_resource type="AudioStream" uid="uid://c2guvitg4pxha" path="res://audio/MusicPart6.mp3" id="7_s6dqa"]
+[ext_resource type="AudioStream" uid="uid://dw4k83hieni7r" path="res://audio/MusicPart7.mp3" id="8_bs56i"]
 [ext_resource type="Texture2D" uid="uid://cgtcf52y78eam" path="res://features/landmarks/factories/sprites/Parking3x3.png" id="8_r6h67"]
 [ext_resource type="Texture2D" uid="uid://txddbj2pr4ep" path="res://features/landmarks/factories/sprites/Left2x2.png" id="9_12npm"]
+[ext_resource type="AudioStream" uid="uid://ce5c6lgme50pb" path="res://audio/MusicPart8.mp3" id="9_cedc0"]
 [ext_resource type="Texture2D" uid="uid://hsdm8vydgn6a" path="res://features/landmarks/factories/sprites/UpRight2x2.png" id="10_gatr5"]
 [ext_resource type="Texture2D" uid="uid://bkx3nnpvpkrxc" path="res://features/landmarks/factories/sprites/LeftDown2x2.png" id="11_vivgj"]
 [ext_resource type="Texture2D" uid="uid://dfnx84tqrc8l8" path="res://features/landmarks/factories/sprites/LeftUp2x2.png" id="12_vivgj"]
@@ -23,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://ufqdws3vq428" path="res://features/flower/sprites/krzak2.png" id="20_c4767"]
 [ext_resource type="Texture2D" uid="uid://ficjlfx5mldu" path="res://features/flower/sprites/krzak2kolor.png" id="21_dlusm"]
 [ext_resource type="PackedScene" uid="uid://cm0nfs0jp2d42" path="res://features/obstacles/koparka/koparka.tscn" id="22_kb811"]
-[ext_resource type="PackedScene" uid="uid://crjk3nscvbwi0" path="res://features/obstacles/smoke/smoke.tscn" id="24_c0yhq"]
+[ext_resource type="PackedScene" path="res://features/obstacles/smoke/smoke.tscn" id="24_c0yhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0yhq"]
 size = Vector2(64, 106)
@@ -57,6 +65,38 @@ size = Vector2(18, 38)
 
 [node name="Factories" type="Node2D"]
 script = ExtResource("1_uafm3")
+
+[node name="MusicPart1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_dj362")
+
+[node name="MusicPart2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_4vs5r")
+
+[node name="MusicPart3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_ebsm0")
+
+[node name="MusicPart4" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_x5ftp")
+
+[node name="MusicPart5" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_hxu8d")
+
+[node name="MusicPart6" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_s6dqa")
+
+[node name="MusicPart7" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_bs56i")
+
+[node name="MusicPart8" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_cedc0")
 
 [node name="1Workshop8x4" type="Sprite2D" parent="."]
 position = Vector2(133, 43)

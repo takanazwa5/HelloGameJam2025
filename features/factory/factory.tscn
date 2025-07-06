@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://wugdxaccemxi"]
+[gd_scene load_steps=20 format=3 uid="uid://wugdxaccemxi"]
 
 [ext_resource type="Script" uid="uid://dsn3qfx5wi8gf" path="res://features/factory/factory.gd" id="1_4ugtf"]
 [ext_resource type="Texture2D" uid="uid://bb78m65bmwsqy" path="res://features/factory/sprites/BaseStation6x6.png" id="2_berpe"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://barjhjwkm2hdj" path="res://features/factory/sprites/Administration4x6.png" id="3_katje"]
 [ext_resource type="Texture2D" uid="uid://dw568tipc2fux" path="res://features/factory/sprites/Pipe4x3.png" id="5_yb8go"]
 [ext_resource type="Texture2D" uid="uid://bpsydxm2g8b6k" path="res://features/factory/sprites/Storage10x6.png" id="6_xkw0e"]
+[ext_resource type="AudioStream" uid="uid://dgt636pka4qsd" path="res://audio/MusicPart1.mp3" id="7_rcli1"]
+[ext_resource type="AudioStream" uid="uid://i1rh62inaxd0" path="res://audio/MusicPart2.mp3" id="8_bwexj"]
+[ext_resource type="AudioStream" uid="uid://dm16cisb5awrd" path="res://audio/MusicPart3.mp3" id="9_2ok8i"]
+[ext_resource type="AudioStream" uid="uid://cyjx8b6i4kva3" path="res://audio/MusicPart4.mp3" id="10_xssn7"]
+[ext_resource type="AudioStream" uid="uid://dcclrpxm6chw4" path="res://audio/MusicPart5.mp3" id="11_o5pel"]
+[ext_resource type="AudioStream" uid="uid://c2guvitg4pxha" path="res://audio/MusicPart6.mp3" id="12_reb16"]
+[ext_resource type="AudioStream" uid="uid://dw4k83hieni7r" path="res://audio/MusicPart7.mp3" id="13_bgv5i"]
+[ext_resource type="AudioStream" uid="uid://ce5c6lgme50pb" path="res://audio/MusicPart8.mp3" id="14_1bmf3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_berpe"]
 radius = 120.067
@@ -25,6 +33,38 @@ radius = 139.291
 [node name="Factory" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_4ugtf")
+
+[node name="MusicPart1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_rcli1")
+
+[node name="MusicPart2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_bwexj")
+
+[node name="MusicPart3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_2ok8i")
+
+[node name="MusicPart4" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_xssn7")
+
+[node name="MusicPart5" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_o5pel")
+
+[node name="MusicPart6" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("12_reb16")
+
+[node name="MusicPart7" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_bgv5i")
+
+[node name="MusicPart8" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_1bmf3")
 
 [node name="Level Timer" type="Timer" parent="."]
 unique_name_in_owner = true

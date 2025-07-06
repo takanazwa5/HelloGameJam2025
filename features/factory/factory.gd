@@ -5,6 +5,14 @@ var _level: int = 0
 @onready var slow_area: Area2D = $Area2D
 @onready var timer: Timer = $LevelTimer
 @onready var corruption_timer: Timer = $CorruptionTimer
+@onready var music_part_1: AudioStreamPlayer = %MusicPart1
+@onready var music_part_2: AudioStreamPlayer = %MusicPart2
+@onready var music_part_3: AudioStreamPlayer = %MusicPart3
+@onready var music_part_4: AudioStreamPlayer = %MusicPart4
+@onready var music_part_5: AudioStreamPlayer = %MusicPart5
+@onready var music_part_6: AudioStreamPlayer = %MusicPart6
+@onready var music_part_7: AudioStreamPlayer = %MusicPart7
+@onready var music_part_8: AudioStreamPlayer = %MusicPart8
 
 func _init() -> void:
 	Global.factory = self
@@ -31,6 +39,7 @@ func _level_up() -> void:
 			corruption_timer.wait_time = 12
 
 			tween_progress_value(14.0)
+			music_part_1.play()
 
 
 		2:
@@ -39,15 +48,21 @@ func _level_up() -> void:
 			corruption_timer.wait_time = 8
 
 			tween_progress_value(26.0)
+			music_part_1.stop()
+			music_part_2.play()
 
 		3:
 			corruption_timer.wait_time = 6
 
 			tween_progress_value(37.5)
+			music_part_2.stop()
+			music_part_3.play()
 		4:
 			# workshop.show()
 			# workshop_slow.disabled = false
 			corruption_timer.wait_time = 4.25
+			music_part_3.stop()
+			music_part_4.play()
 
 			tween_progress_value(49.5)
 
@@ -55,21 +70,29 @@ func _level_up() -> void:
 			corruption_timer.wait_time = 2.25
 
 			tween_progress_value(61.5)
+			music_part_4.stop()
+			music_part_5.play()
 		6:
 			# pipe.show()
 			# pipe_slow.disabled = false
 			corruption_timer.wait_time = 1.5
 
 			tween_progress_value(73.0)
+			music_part_5.stop()
+			music_part_6.play()
 		7:
 			corruption_timer.wait_time = 0.5
 
 			tween_progress_value(85.0)
+			music_part_6.stop()
+			music_part_7.play()
 
 		8:
 			corruption_timer.wait_time = 0.025
 
 			tween_progress_value(100.0)
+			music_part_7.stop()
+			music_part_8.play()
 
 			# storage.show()
 			# storage_slow.disabled = false
