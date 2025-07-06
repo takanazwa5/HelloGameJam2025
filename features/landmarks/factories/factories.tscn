@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://s53od2t0e16i"]
+[gd_scene load_steps=17 format=3 uid="uid://s53od2t0e16i"]
 
+[ext_resource type="Script" uid="uid://dsn3qfx5wi8gf" path="res://features/factory/factory.gd" id="1_uafm3"]
 [ext_resource type="Texture2D" uid="uid://g4q87ae1mjal" path="res://features/factory/sprites/1Workshop8x4.png" id="1_wmn7x"]
 [ext_resource type="Texture2D" uid="uid://ca160wvv5xb75" path="res://features/factory/sprites/Administration2x3.png" id="2_kc2j5"]
 [ext_resource type="Texture2D" uid="uid://barjhjwkm2hdj" path="res://features/factory/sprites/Administration4x6.png" id="3_r6h67"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://0m78xrs8ywt8" path="res://features/landmarks/camping_site/sprites/camping_stuff.png" id="15_7ekr7"]
 
 [node name="Factories" type="Node2D"]
+script = ExtResource("1_uafm3")
 
 [node name="1Workshop8x4" type="Sprite2D" parent="."]
 position = Vector2(133, 43)
@@ -509,3 +511,16 @@ scale = Vector2(1, -1)
 texture = ExtResource("15_7ekr7")
 region_enabled = true
 region_rect = Rect2(11, 5, 8, 4)
+
+[node name="CorruptionTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="LevelTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-1, -2, 718, 2, 715, 634, 282, 630, 281, 532, 177, 529, 180, 403, -52, 398, -41, 195, -88, 189, -91, 92, -20, 91)

@@ -12,7 +12,7 @@ const BEEHIVE: PackedScene = preload("res://features/beehive/beehive.tscn")
 @onready var bee_cost_label: Label = %BeeCostLabel
 
 
-var bee_cost: int = 10
+var bee_cost: int = 4
 var hives: Array = []
 var bees: Array = []
 var game_time: int = 0
@@ -28,12 +28,17 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
+	for x in 3:
+		for y in 3:
+			var tile_x = player_tile.x - 1 + x
+			var tile_y = player_tile.y - 1 + y
+			if level.get_tile(tile_x, tile_y) == LevelGenerator.TileType.CORRUPTED:
+				if player.pollen > 0:
+					player.honey += 1
+					player.pollen -= 1
+					level.set_tile(LevelGenerator.TileType.NORMAL, tile_x, tile_y)
 
-	if level.get_tile(player_tile.x, player_tile.y) == LevelGenerator.TileType.CORRUPTED:
-		if player.pollen > 0:
-			level.set_tile(LevelGenerator.TileType.NORMAL, player_tile.x, player_tile.y)
-			player.honey += 1
-			player.pollen -= 1
+
 	#print("player tile: %s" % player_tile)
 
 
@@ -51,20 +56,13 @@ func _spawn_bee() -> void:
 	if player.honey < bee_cost or hives.is_empty(): return
 
 	player.honey -= bee_cost
-	bee_cost += 5
+	bee_cost += 2
 	bee_cost_label.text = str(bee_cost)
 	var new_bee = BEE.instantiate()
 	add_child(new_bee)
 	new_bee.position = player.position
 
-	var best_hive : BeeHive = null
-	var best_distance : float = INF
-
-	for hive in hives:
-		var dist = new_bee.position.distance_to(hive.position)
-		if dist < best_distance:
-			best_distance = dist
-			best_hive = hive
+	var best_hive : BeeHive = get_best_hive(new_bee)
 
 	new_bee.set_home(best_hive)
 	new_bee.level = level
@@ -72,12 +70,23 @@ func _spawn_bee() -> void:
 
 	bees.append(new_bee)
 
+func get_best_hive(bee : WorkerBee):
+	var best_hive : BeeHive = null
+	var best_distance : float = INF
+
+	for hive in hives:
+		var dist = bee.position.distance_to(hive.position)
+		if dist < best_distance:
+			best_distance = dist
+			best_hive = hive
+
+	return best_hive
 
 func _spawn_beehive() -> void:
-	if player.honey < 50:
+	if player.honey < 40:
 		return
 
-	player.honey -= 50
+	player.honey -= 40
 	var new_bee_hive = BEEHIVE.instantiate()
 	add_child(new_bee_hive)
 	new_bee_hive.position = player.position;

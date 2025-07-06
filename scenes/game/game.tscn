@@ -10,7 +10,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_2a8rs"]
 font = ExtResource("6_87uf6")
-font_size = 11
+font_size = 8
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
@@ -29,6 +29,7 @@ position = Vector2(936, 833)
 
 [node name="GameTimeLabel" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -71,7 +72,7 @@ offset_right = 12.0
 offset_bottom = 8.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "10"
+text = "4"
 label_settings = SubResource("LabelSettings_2a8rs")
 
 [node name="HoneyIcon2" type="TextureRect" parent="CanvasLayer"]
@@ -96,7 +97,7 @@ offset_right = 15.0
 offset_bottom = 8.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "50"
+text = "40"
 label_settings = SubResource("LabelSettings_2a8rs")
 
 [node name="MainBeehive" parent="." instance=ExtResource("5_lfrn8")]

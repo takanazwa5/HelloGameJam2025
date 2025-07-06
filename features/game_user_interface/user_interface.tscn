@@ -78,10 +78,10 @@ stretch_mode = 5
 
 [node name="LevelLabel" type="Label" parent="."]
 layout_mode = 2
-offset_left = 321.0
-offset_top = 64.0
-offset_right = 333.0
-offset_bottom = 81.0
+offset_left = 303.0
+offset_top = 66.0
+offset_right = 315.0
+offset_bottom = 83.0
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
 theme_override_font_sizes/font_size = 7

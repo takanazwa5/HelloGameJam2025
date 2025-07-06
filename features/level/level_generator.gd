@@ -86,6 +86,11 @@ func update_pollution_progress():
 	Global.ui.pollution_progress.value = remap(ratio, 0.0, 1.0, 0.15, 0.85)
 	Global.ui.pollution_label.text = str(snapped(ratio * 100, 0.1)) + "%"
 
+	if ratio < 0.05 && Global.factory._level >= 8:
+		var game_over_scene: PackedScene = load("res://scenes/game_over_screen/game_over_screen.tscn")
+		get_tree().change_scene_to_packed(game_over_scene)
+
+
 func generate_map() -> void:
 	var used_rect : Rect2i = tilemap_layer.get_used_rect()
 

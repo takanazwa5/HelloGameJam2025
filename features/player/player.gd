@@ -1,9 +1,9 @@
 class_name Player extends CharacterBody2D
 
 
-const SPEED: float = 50.0
+const SPEED: float = 62.5
 const ACCELERATION: float = 1.0
-const STARTING_POLLEN: int = 50
+const STARTING_POLLEN: int = 75
 const STARTING_HONEY: int = 0
 
 
