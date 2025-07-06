@@ -36,7 +36,7 @@ func _level_up() -> void:
 
 	match _level:
 		1:
-			corruption_timer.wait_time = 12
+			corruption_timer.wait_time = 10
 
 			tween_progress_value(14.0)
 			music_part_1.play()
@@ -45,14 +45,14 @@ func _level_up() -> void:
 		2:
 			# administration.show()
 			# administration_slow.disabled = false
-			corruption_timer.wait_time = 8
+			corruption_timer.wait_time = 7
 
 			tween_progress_value(26.0)
 			music_part_1.stop()
 			music_part_2.play()
 
 		3:
-			corruption_timer.wait_time = 6
+			corruption_timer.wait_time = 5
 
 			tween_progress_value(37.5)
 			music_part_2.stop()
@@ -60,14 +60,14 @@ func _level_up() -> void:
 		4:
 			# workshop.show()
 			# workshop_slow.disabled = false
-			corruption_timer.wait_time = 4.25
+			corruption_timer.wait_time = 3.5
 			music_part_3.stop()
 			music_part_4.play()
 
 			tween_progress_value(49.5)
 
 		5:
-			corruption_timer.wait_time = 2.25
+			corruption_timer.wait_time = 1.75
 
 			tween_progress_value(61.5)
 			music_part_4.stop()
@@ -75,13 +75,13 @@ func _level_up() -> void:
 		6:
 			# pipe.show()
 			# pipe_slow.disabled = false
-			corruption_timer.wait_time = 1.5
+			corruption_timer.wait_time = 0.75
 
 			tween_progress_value(73.0)
 			music_part_5.stop()
 			music_part_6.play()
 		7:
-			corruption_timer.wait_time = 0.5
+			corruption_timer.wait_time = 0.25
 
 			tween_progress_value(85.0)
 			music_part_6.stop()

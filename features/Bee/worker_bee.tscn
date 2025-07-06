@@ -49,6 +49,6 @@ script = ExtResource("6_84pwg")
 remote_path = NodePath("../Shadow")
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 90.0
+wait_time = 200.0
 one_shot = true
 autostart = true

@@ -134,54 +134,58 @@ func get_tile(pos_x : int, pos_y : int) -> TileType:
 	return current_tile.tile_type
 
 func get_best_tile_for_factory(factory: Factory) -> Vector2:
-	var best_pos : Vector2 = Vector2.ZERO
-	var best_distance : float = INF
-	var factory_pos : Vector2 = factory.position
+	var best_pos := Vector2.ZERO
+	var best_distance := INF
+	var factory_pos := factory.position
 
-	for x in map_grid.size():
-		for y in map_grid[x].size():
-			var tile : LevelTileData = map_grid[x][y]
+	# Iteracja bezpośrednio po tablicy map_grid
+	for x in range(map_grid.size()):
+		var row = map_grid[x]
+		for y in range(row.size()):
+			var tile: LevelTileData = row[y]
+
+			# Sprawdzamy typ kafelka zanim wywołamy map_to_local
 			if tile.tile_type == TileType.NORMAL:
-				var tile_world_pos = tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
-				var dist = factory_pos.distance_to(tile_world_pos)
+				var tile_world_pos := tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
+				var dist := factory_pos.distance_squared_to(tile_world_pos) # Używamy distance_squared_to zamiast distance_to
 
 				if dist < best_distance:
 					best_distance = dist
 					best_pos = tile_world_pos
 
-	if best_distance != INF:
-		return best_pos
-	else:
-		return Vector2.ZERO
+	return best_pos if best_distance != INF else Vector2.ZERO
 
-func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
-	var best_pos : Vector2 = Vector2.ZERO
-	var best_distance : float = INF
-	var bee_pos : Vector2 = bee.position
+func get_best_tile_for_bee(bee: WorkerBee, bee_array) -> Vector2:
+	var best_pos := Vector2.ZERO
+	var best_distance := INF
+	var bee_pos := bee.position
 
-	for x in map_grid.size():
-		for y in map_grid[x].size():
-			var tile : LevelTileData = map_grid[x][y]
+	# Wstępne przygotowanie zbioru zajętych pozycji
+	var occupied_positions := {}
+	for current_bee in bee_array:
+		if is_instance_valid(current_bee):
+			# Używamy pozycji jako klucz w słowniku - dużo szybsze sprawdzanie
+			occupied_positions[Vector2(current_bee.target_pos.x, current_bee.target_pos.y)] = true
+
+	# Iteracja bezpośrednio po tablicy map_grid
+	for x in range(map_grid.size()):
+		var row = map_grid[x]
+		for y in range(row.size()):
+			var tile: LevelTileData = row[y]
+
+			# Sprawdzamy typ kafelka zanim wywołamy map_to_local
 			if tile.tile_type == TileType.CORRUPTED:
-				var tile_world_pos = tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
-				var dist = bee_pos.distance_to(tile_world_pos)
+				var tile_world_pos := tilemap_layer.map_to_local(Vector2i(tile.pos_x, tile.pos_y))
 
-				var bad_pos = false
-				for current_bee in bee_array:
-					if !is_instance_valid(current_bee):
-						continue
+				# Szybkie sprawdzenie czy pozycja jest zajęta
+				if not occupied_positions.has(tile_world_pos):
+					var dist := bee_pos.distance_squared_to(tile_world_pos) # Używamy distance_squared_to
 
-					if Vector2(current_bee.target_pos.x, current_bee.target_pos.y) == Vector2(tile_world_pos.x, tile_world_pos.y):
-						bad_pos = true
+					if dist < best_distance:
+						best_distance = dist
+						best_pos = tile_world_pos
 
-				if !bad_pos && dist < best_distance:
-					best_distance = dist
-					best_pos = tile_world_pos
-
-	if best_distance != INF:
-		return best_pos
-	else:
-		return bee_pos
+	return best_pos if best_distance != INF else bee_pos
 
 func get_tile_type(index : int) -> int:
 	if index == 1:

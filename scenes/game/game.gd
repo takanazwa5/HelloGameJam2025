@@ -12,7 +12,7 @@ const BEEHIVE: PackedScene = preload("res://features/beehive/beehive.tscn")
 @onready var bee_cost_label: Label = %BeeCostLabel
 
 
-var bee_cost: int = 4
+var bee_cost: int = 2
 var hives: Array = []
 var bees: Array = []
 var game_time: int = 0
@@ -59,7 +59,7 @@ func _spawn_bee() -> void:
 	if player.honey < bee_cost or hives.is_empty(): return
 
 	player.honey -= bee_cost
-	bee_cost += 2
+	bee_cost += 1
 	bee_cost_label.text = str(bee_cost)
 	var new_bee = BEE.instantiate()
 	add_child(new_bee)
