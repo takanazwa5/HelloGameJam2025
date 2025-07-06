@@ -382,11 +382,8 @@ position = Vector2(369, -786)
 [node name="Powerplant" parent="landmarks" instance=ExtResource("60_nca55")]
 position = Vector2(581, 223)
 
-[node name="colliders" type="Node2D" parent="."]
-position = Vector2(784, 818)
-
-[node name="Boulderlands" parent="." instance=ExtResource("61_wo7fh")]
-position = Vector2(19, 1007)
+[node name="Boulderlands" parent="landmarks" instance=ExtResource("61_wo7fh")]
+position = Vector2(-765, 189)
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 

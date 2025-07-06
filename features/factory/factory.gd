@@ -28,7 +28,7 @@ func _level_up() -> void:
 
 	match _level:
 		1:
-			corruption_timer.wait_time = 15
+			corruption_timer.wait_time = 12
 
 			tween_progress_value(14.0)
 
@@ -36,33 +36,33 @@ func _level_up() -> void:
 		2:
 			# administration.show()
 			# administration_slow.disabled = false
-			corruption_timer.wait_time = 10
+			corruption_timer.wait_time = 8
 
 			tween_progress_value(26.0)
 
 		3:
-			corruption_timer.wait_time = 7.5
+			corruption_timer.wait_time = 6
 
 			tween_progress_value(37.5)
 		4:
 			# workshop.show()
 			# workshop_slow.disabled = false
-			corruption_timer.wait_time = 5
+			corruption_timer.wait_time = 4.25
 
 			tween_progress_value(49.5)
 
 		5:
-			corruption_timer.wait_time = 3
+			corruption_timer.wait_time = 2.25
 
 			tween_progress_value(61.5)
 		6:
 			# pipe.show()
 			# pipe_slow.disabled = false
-			corruption_timer.wait_time = 2.5
+			corruption_timer.wait_time = 1.5
 
 			tween_progress_value(73.0)
 		7:
-			corruption_timer.wait_time = 1
+			corruption_timer.wait_time = 0.5
 
 			tween_progress_value(85.0)
 

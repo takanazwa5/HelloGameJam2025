@@ -53,11 +53,11 @@ func _process(delta: float) -> void:
 	if position.distance_to(current_destination) < 0.1:
 		if fixed_tile:
 			target_pos = get_best_tile()
-			wait_timer = 1.00
+			wait_timer = 0.5
 			if gathered_honey:
 				game.player.honey += 1
 		else:
-			work_timer = 0.5
+			work_timer = 0.25
 			working = true
 
 		fixed_tile = !fixed_tile
