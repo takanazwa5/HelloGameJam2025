@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://clmfhrqewjyir"]
+[gd_scene load_steps=12 format=3 uid="uid://bjw85451snou3"]
 
 [ext_resource type="Texture2D" uid="uid://0m78xrs8ywt8" path="res://features/landmarks/camping_site/sprites/camping_stuff.png" id="1_5p5au"]
 [ext_resource type="Texture2D" uid="uid://78e8l1gmy3gw" path="res://features/landmarks/camping_site/sprites/camping_tents.png" id="2_si31y"]
 [ext_resource type="PackedScene" uid="uid://c71c4f8mgpjkw" path="res://features/killable/ognisko/ognisko.tscn" id="3_si31y"]
 [ext_resource type="PackedScene" uid="uid://2k0xt1odyegs" path="res://features/obstacles/drzewo/drzewo.tscn" id="4_okre7"]
 [ext_resource type="PackedScene" uid="uid://bx8exhk5nq3fu" path="res://features/obstacles/drzewo/drzewo2.tscn" id="5_wm32s"]
-[ext_resource type="PackedScene" uid="uid://dtrr5yir1h7q5" path="res://features/obstacles/kamien/kamien.tscn" id="7_cm5xo"]
+[ext_resource type="PackedScene" uid="uid://bffcka3cm2e8e" path="res://features/obstacles/kamien/kamien.tscn" id="6_g045t"]
+[ext_resource type="PackedScene" uid="uid://b3y8ok10jihvp" path="res://features/obstacles/kamien/kamien2.tscn" id="7_cm5xo"]
+[ext_resource type="Texture2D" uid="uid://ficjlfx5mldu" path="res://features/flower/sprites/krzak2kolor.png" id="8_l5grp"]
+[ext_resource type="Texture2D" uid="uid://ufqdws3vq428" path="res://features/flower/sprites/krzak2.png" id="9_3ohc4"]
+[ext_resource type="Texture2D" uid="uid://bxo3q5rv33u0x" path="res://features/flower/sprites/krzak1maly.png" id="10_3ohc4"]
+[ext_resource type="Texture2D" uid="uid://blq6lu10tbods" path="res://features/flower/sprites/krzak1.png" id="11_re4ag"]
 
 [node name="CampingSite" type="Node2D"]
 
@@ -31,6 +36,34 @@ region_rect = Rect2(3, 11, 10, 9)
 
 [node name="Branches4" type="Sprite2D" parent="Trash"]
 position = Vector2(220, 113)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches7" type="Sprite2D" parent="Trash"]
+position = Vector2(694, 152)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches8" type="Sprite2D" parent="Trash"]
+position = Vector2(550, 253)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches9" type="Sprite2D" parent="Trash"]
+position = Vector2(813, 163)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches10" type="Sprite2D" parent="Trash"]
+position = Vector2(798, -37)
 scale = Vector2(-1, 1)
 texture = ExtResource("1_5p5au")
 region_enabled = true
@@ -158,6 +191,48 @@ texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(2, 3, 6, 6)
 
+[node name="Mushroom6" type="Sprite2D" parent="."]
+position = Vector2(424, 126)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom11" type="Sprite2D" parent="."]
+position = Vector2(343, 222)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom7" type="Sprite2D" parent="."]
+position = Vector2(385, 329)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom8" type="Sprite2D" parent="."]
+position = Vector2(550, 268)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom9" type="Sprite2D" parent="."]
+position = Vector2(703, 174)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom10" type="Sprite2D" parent="."]
+position = Vector2(636, 44)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom12" type="Sprite2D" parent="."]
+position = Vector2(491, 24)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
 [node name="Mushroom5" type="Sprite2D" parent="."]
 position = Vector2(126, 173)
 texture = ExtResource("1_5p5au")
@@ -179,6 +254,13 @@ region_rect = Rect2(11, 5, 8, 4)
 
 [node name="Rocks8" type="Sprite2D" parent="."]
 position = Vector2(279, 163)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks10" type="Sprite2D" parent="."]
+position = Vector2(378, 229)
 scale = Vector2(-1, 1)
 texture = ExtResource("1_5p5au")
 region_enabled = true
@@ -211,6 +293,13 @@ region_rect = Rect2(22, 4, 8, 5)
 
 [node name="Rocks6" type="Sprite2D" parent="."]
 position = Vector2(127, 161)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks11" type="Sprite2D" parent="."]
+position = Vector2(242, 286)
 scale = Vector2(-1, 1)
 texture = ExtResource("1_5p5au")
 region_enabled = true
@@ -367,6 +456,12 @@ position = Vector2(230, 19)
 [node name="Drzewo4" parent="." instance=ExtResource("4_okre7")]
 position = Vector2(341, -20)
 
+[node name="Drzewo17" parent="." instance=ExtResource("4_okre7")]
+position = Vector2(651, 19)
+
+[node name="Drzewo19" parent="." instance=ExtResource("4_okre7")]
+position = Vector2(401, 99)
+
 [node name="Drzewo5" parent="." instance=ExtResource("4_okre7")]
 position = Vector2(265, 137)
 
@@ -389,7 +484,13 @@ position = Vector2(359, 199)
 position = Vector2(-113, 84)
 
 [node name="Drzewo15" parent="." instance=ExtResource("5_wm32s")]
-position = Vector2(411, 83)
+position = Vector2(510, -65)
+
+[node name="Drzewo20" parent="." instance=ExtResource("5_wm32s")]
+position = Vector2(872, 293)
+
+[node name="Drzewo18" parent="." instance=ExtResource("5_wm32s")]
+position = Vector2(674, 238)
 
 [node name="Drzewo10" parent="." instance=ExtResource("5_wm32s")]
 position = Vector2(-32, -49)
@@ -414,3 +515,70 @@ scale = Vector2(-1, 1)
 
 [node name="Kamien3" parent="." instance=ExtResource("7_cm5xo")]
 position = Vector2(-71, -158)
+
+[node name="Krzak2Kolor" type="Sprite2D" parent="."]
+position = Vector2(680, 48)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor3" type="Sprite2D" parent="."]
+position = Vector2(872, 78)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor4" type="Sprite2D" parent="."]
+position = Vector2(537, -52)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2" type="Sprite2D" parent="."]
+position = Vector2(541, 114)
+texture = ExtResource("9_3ohc4")
+
+[node name="Krzak3" type="Sprite2D" parent="."]
+position = Vector2(258, 266)
+texture = ExtResource("9_3ohc4")
+
+[node name="Krzak4" type="Sprite2D" parent="."]
+position = Vector2(647, 438)
+texture = ExtResource("9_3ohc4")
+
+[node name="Krzak5" type="Sprite2D" parent="."]
+position = Vector2(971, 151)
+texture = ExtResource("9_3ohc4")
+
+[node name="Krzak2Kolor2" type="Sprite2D" parent="."]
+position = Vector2(428, 110)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak1Maly" type="Sprite2D" parent="."]
+position = Vector2(493, 241)
+texture = ExtResource("10_3ohc4")
+
+[node name="Krzak1Maly2" type="Sprite2D" parent="."]
+position = Vector2(858, 327)
+texture = ExtResource("10_3ohc4")
+
+[node name="Krzak1Maly3" type="Sprite2D" parent="."]
+position = Vector2(369, 322)
+texture = ExtResource("10_3ohc4")
+
+[node name="Krzak1" type="Sprite2D" parent="."]
+position = Vector2(827, 147)
+texture = ExtResource("11_re4ag")
+
+[node name="Krzak6" type="Sprite2D" parent="."]
+position = Vector2(821, -48)
+texture = ExtResource("11_re4ag")
+
+[node name="Kamien7" parent="." instance=ExtResource("6_g045t")]
+position = Vector2(722, 162)
+
+[node name="Kamien9" parent="." instance=ExtResource("6_g045t")]
+position = Vector2(621, 428)
+
+[node name="Kamien8" parent="." instance=ExtResource("7_cm5xo")]
+position = Vector2(792, -62)
+
+[node name="Kamien10" parent="." instance=ExtResource("7_cm5xo")]
+position = Vector2(891, 69)
+
+[node name="Kamien11" parent="." instance=ExtResource("7_cm5xo")]
+position = Vector2(536, 257)
