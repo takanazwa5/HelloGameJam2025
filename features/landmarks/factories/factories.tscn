@@ -751,6 +751,9 @@ region_rect = Rect2(2, 3, 6, 6)
 [node name="Koparka" parent="." instance=ExtResource("22_kb811")]
 position = Vector2(184, 513)
 
+[node name="Koparka6" parent="." instance=ExtResource("22_kb811")]
+position = Vector2(-139, 495)
+
 [node name="Koparka2" parent="." instance=ExtResource("22_kb811")]
 position = Vector2(-103, 308)
 scale = Vector2(-1, 1)
@@ -882,4 +885,4 @@ position = Vector2(565, 170)
 shape = SubResource("RectangleShape2D_dlusm")
 
 [node name="Koparka5" parent="." instance=ExtResource("22_kb811")]
-position = Vector2(-202, 550)
+position = Vector2(-161, 171)
