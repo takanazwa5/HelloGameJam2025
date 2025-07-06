@@ -114,6 +114,13 @@ func _on_timer_timeout() -> void:
 
 func on_corruption_timer_timeout() -> void:
 	var best_tile = Global.game.level.get_best_tile_for_factory(self)
+
+	var particles = load("res://scenes/particles/change_particle.tscn")
+	var new_partciles = particles.instantiate()
+	Global.game.add_child(new_partciles)
+	new_partciles.position = Vector2(best_tile.x + 8, best_tile.y + 8)
+	new_partciles.restart()
+
 	Global.game.level.set_tile(LevelGenerator.TileType.CORRUPTED, best_tile.x / 16, best_tile.y / 16)
 	# print("PosX: %s" % best_tile.x )
 	# print("PosY: %s" % best_tile.y )

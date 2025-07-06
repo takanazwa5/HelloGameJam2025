@@ -38,8 +38,8 @@ func _process(delta: float) -> void:
 		if level.get_tile(target_pos.x / 16, target_pos. y/ 16) == LevelGenerator.TileType.CORRUPTED:
 			level.set_tile(LevelGenerator.TileType.NORMAL, target_pos.x / 16, target_pos.y / 16)
 			gathered_honey = true
-			var particles = load("res://scenes/particles/change_particle.tscn")
 
+			var particles = load("res://scenes/particles/change_particle.tscn")
 			var new_partciles = particles.instantiate()
 			Global.game.add_child(new_partciles)
 			new_partciles.position = Vector2(target_pos.x, target_pos.y)
