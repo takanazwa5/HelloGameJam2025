@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://6c3ivmtu08xs"]
 
 [ext_resource type="PackedScene" uid="uid://b8n517sc0drjs" path="res://features/obstacles/wiatrak/wiatrak.tscn" id="1_5aftk"]
-[ext_resource type="PackedScene" uid="uid://b3y8ok10jihvp" path="res://features/obstacles/kamien/kamien2.tscn" id="5_nuq22"]
+[ext_resource type="PackedScene" path="res://features/obstacles/kamien/kamien2.tscn" id="5_nuq22"]
 [ext_resource type="Texture2D" uid="uid://0m78xrs8ywt8" path="res://features/landmarks/camping_site/sprites/camping_stuff.png" id="6_6dbm6"]
-[ext_resource type="PackedScene" uid="uid://bffcka3cm2e8e" path="res://features/obstacles/kamien/kamien.tscn" id="6_vc4t0"]
+[ext_resource type="PackedScene" uid="uid://dtrr5yir1h7q5" path="res://features/obstacles/kamien/kamien.tscn" id="6_vc4t0"]
 [ext_resource type="PackedScene" uid="uid://2k0xt1odyegs" path="res://features/obstacles/drzewo/drzewo.tscn" id="7_k1kv1"]
 [ext_resource type="Texture2D" uid="uid://ficjlfx5mldu" path="res://features/flower/sprites/krzak2kolor.png" id="10_vc4t0"]
 [ext_resource type="Texture2D" uid="uid://bxo3q5rv33u0x" path="res://features/flower/sprites/krzak1maly.png" id="10_vlfte"]
