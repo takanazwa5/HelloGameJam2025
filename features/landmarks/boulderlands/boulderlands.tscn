@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1dhgye1djxw5"]
+
+[ext_resource type="PackedScene" uid="uid://b3y8ok10jihvp" path="res://features/obstacles/kamien/kamien2.tscn" id="1_p5okm"]
+[ext_resource type="PackedScene" uid="uid://bffcka3cm2e8e" path="res://features/obstacles/kamien/kamien.tscn" id="2_12jtp"]
+
+[node name="Boulderlands" type="Node2D"]
+
+[node name="Kamien" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(121, 109)
+
+[node name="Kamien9" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(268, 239)
+
+[node name="Kamien11" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(-9, 281)
+
+[node name="Kamien4" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(198, 27)
+scale = Vector2(-1, 1)
+
+[node name="Kamien13" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(0, 61)
+scale = Vector2(-1, 1)
+
+[node name="Kamien20" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(95, 298)
+scale = Vector2(-1, 1)
+
+[node name="Kamien14" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(210, 363)
+scale = Vector2(-1, 1)
+
+[node name="Kamien19" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(108, 439)
+scale = Vector2(-1, 1)
+
+[node name="Kamien5" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(263, -24)
+scale = Vector2(-1, 1)
+
+[node name="Kamien16" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(32, -163)
+scale = Vector2(-1, 1)
+
+[node name="Kamien6" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(129, -95)
+scale = Vector2(-1, 1)
+
+[node name="Kamien17" parent="." instance=ExtResource("1_p5okm")]
+position = Vector2(87, -313)
+scale = Vector2(-1, 1)
+
+[node name="Kamien2" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(23, 165)
+
+[node name="Kamien15" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(18, 394)
+
+[node name="Kamien12" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(237, -145)
+
+[node name="Kamien3" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(269, 162)
+scale = Vector2(-1, 1)
+
+[node name="Kamien7" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(129, 244)
+scale = Vector2(-1, 1)
+
+[node name="Kamien8" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(45, 592)
+scale = Vector2(-1, 1)
+
+[node name="Kamien10" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(35, -10)
+scale = Vector2(-1, 1)
+
+[node name="Kamien18" parent="." instance=ExtResource("2_12jtp")]
+position = Vector2(123, -247)
+scale = Vector2(-1, 1)
