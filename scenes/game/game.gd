@@ -37,6 +37,12 @@ func _process(_delta: float) -> void:
 			var tile_y = player_tile.y - 1 + y
 			if level.get_tile(tile_x, tile_y) == LevelGenerator.TileType.CORRUPTED:
 				if player.pollen > 0:
+					var particles = load("res://scenes/particles/change_particle.tscn")
+					var new_partciles = particles.instantiate()
+					Global.game.add_child(new_partciles)
+					new_partciles.position = Vector2(tile_x * 16 + 8, tile_y * 16 + 8)
+					new_partciles.restart()
+
 					player.honey += 1
 					player.pollen -= 1
 					level.set_tile(LevelGenerator.TileType.NORMAL, tile_x, tile_y)
