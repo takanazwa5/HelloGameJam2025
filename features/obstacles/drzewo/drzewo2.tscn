@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx8exhk5nq3fu"]
+
+[ext_resource type="Texture2D" uid="uid://da0tvmbnrkt5i" path="res://features/obstacles/drzewo/shadow.png" id="1_r53jl"]
+[ext_resource type="Texture2D" uid="uid://p8hqng48xnc2" path="res://features/obstacles/drzewo/pine.png" id="2_r53jl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ht42"]
+size = Vector2(6, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2uua"]
+size = Vector2(14, 8)
+
+[node name="Drzewo" type="StaticBody2D"]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 20)
+texture = ExtResource("1_r53jl")
+
+[node name="Drzewo" type="Sprite2D" parent="."]
+texture = ExtResource("2_r53jl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_6ht42")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+shape = SubResource("RectangleShape2D_x2uua")

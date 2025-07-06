@@ -48,7 +48,7 @@ func _process(_delta: float) -> void:
 					corrupted_tiles += 1.0
 
 	var ratio = normal_tiles / (used_rect.size.x * used_rect.size.y)
-	print (ratio)
+	#print (ratio)
 	Global.ui.pollution_progress.value = remap(ratio, 0.0, 1.0, 0.15, 0.85)
 	Global.ui.pollution_label.text = str(snapped(ratio * 100, 0.1)) + "%"
 
