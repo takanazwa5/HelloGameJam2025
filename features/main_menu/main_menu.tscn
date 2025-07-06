@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_tchvw"]
 [ext_resource type="Texture2D" uid="uid://cgi2aqoj35l7t" path="res://Textures/ui/hotbar/wide_button-press.png" id="3_5kmfg"]
 [ext_resource type="Texture2D" uid="uid://dcmik0faacihl" path="res://Textures/ui/hotbar/wide_button-hover.png" id="4_57wsn"]
-[ext_resource type="Script" path="res://features/main_menu/button_animation.gd" id="5_5bpxy"]
+[ext_resource type="Script" uid="uid://ctec1v4kqnh5" path="res://features/main_menu/button_animation.gd" id="5_5bpxy"]
 [ext_resource type="AudioStream" uid="uid://ciwrducd7rdgy" path="res://audio/MainMenu.mp3" id="7_57wsn"]
 
 [node name="MainMenu" type="Control"]

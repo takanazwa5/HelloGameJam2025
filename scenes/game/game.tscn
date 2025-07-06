@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="5_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://kx0rc8xji11i" path="res://features/main_beehive/main_beehive.tscn" id="5_lfrn8"]
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="6_87uf6"]
-[ext_resource type="Script" uid="uid://ctucrxxp1cfoy" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
+[ext_resource type="Script" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
 [ext_resource type="Texture2D" uid="uid://cuchypayd6i8" path="res://Textures/ui/mouse_left.png" id="8_2a8rs"]
 [ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
 
