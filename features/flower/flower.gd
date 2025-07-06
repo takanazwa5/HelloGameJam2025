@@ -17,6 +17,8 @@ const WRZOSY: Texture2D = preload("res://features/flower/sprites/wrzosy.png")
 @onready var collision_16: CollisionShape2D = %Collision16
 @onready var collision_32: CollisionShape2D = %Collision32
 
+var picked : bool = false
+
 
 func _init() -> void:
 	body_entered.connect(_on_body_entered)
@@ -37,7 +39,11 @@ func _randomize_flower() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is Player && !picked:
 		print("player picked up flower")
 		body.pollen += POLLEN_VALUE
-		queue_free()
+		picked = true
+
+		var tween = get_tree().create_tween()
+		tween.tween_property(sprite_2d, ^"scale", Vector2(1, 0), 0.2)
+		tween.tween_callback(queue_free)

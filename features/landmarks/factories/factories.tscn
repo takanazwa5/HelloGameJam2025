@@ -633,7 +633,7 @@ wait_time = 15.0
 autostart = true
 
 [node name="LevelTimer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 45.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
