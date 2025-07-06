@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bubjpywovpeuc"]
+[gd_scene load_steps=11 format=3 uid="uid://bubjpywovpeuc"]
 
 [ext_resource type="Script" uid="uid://c7g3yr0yusxps" path="res://features/main_menu/main_menu.gd" id="1_nya6c"]
 [ext_resource type="Texture2D" uid="uid://dj2usxcjps83x" path="res://Textures/ui/hotbar/wide_button.png" id="2_5kmfg"]
@@ -8,6 +8,13 @@
 [ext_resource type="Script" uid="uid://ctec1v4kqnh5" path="res://features/main_menu/button_animation.gd" id="5_5bpxy"]
 [ext_resource type="AudioStream" uid="uid://ciwrducd7rdgy" path="res://audio/MainMenu.mp3" id="7_57wsn"]
 [ext_resource type="FontFile" uid="uid://bm7nyahvopy2w" path="res://Fonts/Pixel (47)/Diary of an 8-bit mage.otf" id="7_x02ou"]
+[ext_resource type="Texture2D" uid="uid://cfyc14bmj580l" path="res://Textures/ui/credits.png" id="9_x02ou"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_epxoq"]
+font = ExtResource("7_x02ou")
+font_size = 9
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -106,6 +113,42 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_57wsn")
 autoplay = true
+
+[node name="Credits" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -71.0
+offset_right = 133.0
+offset_bottom = 71.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("9_x02ou")
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -34.5
+offset_right = 47.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tomasz Pawełczyk
+Kacper Grabowiec
+Artem Storozhuk
+Sabina Pawłów
+Paulina Maculewicz
+Wiktoria Małecka"
+label_settings = SubResource("LabelSettings_epxoq")
 
 [connection signal="mouse_entered" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_mouse_exited"]
