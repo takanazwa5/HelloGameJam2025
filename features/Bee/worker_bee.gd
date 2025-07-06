@@ -3,7 +3,7 @@ class_name WorkerBee extends Node2D
 var level : LevelGenerator
 var game : Game
 
-var speed : float = 35
+var speed : float = 40
 var home_hive : BeeHive
 var target_pos : Vector2i
 var fixed_tile : bool = true

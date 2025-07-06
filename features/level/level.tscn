@@ -357,7 +357,7 @@ sources/0 = SubResource("TileSetAtlasSource_wo7fh")
 script = ExtResource("1_5ntxm")
 
 [node name="FlowerSpawnTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 3.5
 autostart = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
