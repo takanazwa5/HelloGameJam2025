@@ -87,3 +87,6 @@ autoplay = true
 [node name="End2" type="Sprite2D" parent="."]
 position = Vector2(59, 94)
 texture = ExtResource("9_2so18")
+
+[connection signal="mouse_entered" from="RetryButton" to="RetryButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RetryButton" to="RetryButton" method="_on_mouse_exited"]
