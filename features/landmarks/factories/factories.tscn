@@ -32,6 +32,14 @@ texture = ExtResource("1_wmn7x")
 position = Vector2(138, 296)
 texture = ExtResource("2_kc2j5")
 
+[node name="Administration2x7" type="Sprite2D" parent="."]
+position = Vector2(337, 430)
+texture = ExtResource("2_kc2j5")
+
+[node name="Administration2x8" type="Sprite2D" parent="."]
+position = Vector2(368, 430)
+texture = ExtResource("2_kc2j5")
+
 [node name="Administration2x5" type="Sprite2D" parent="."]
 position = Vector2(509, 68)
 texture = ExtResource("2_kc2j5")
@@ -401,6 +409,12 @@ texture = ExtResource("15_7ekr7")
 region_enabled = true
 region_rect = Rect2(3, 11, 10, 9)
 
+[node name="Branches6" type="Sprite2D" parent="."]
+position = Vector2(418, 405)
+texture = ExtResource("15_7ekr7")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
 [node name="Beer_Bottle" type="Sprite2D" parent="."]
 position = Vector2(-42.5, 317.5)
 texture = ExtResource("15_7ekr7")
@@ -595,8 +609,16 @@ texture = ExtResource("18_64u3g")
 position = Vector2(294, 596)
 texture = ExtResource("19_c0yhq")
 
+[node name="Krzak7" type="Sprite2D" parent="."]
+position = Vector2(433, 386)
+texture = ExtResource("19_c0yhq")
+
 [node name="Krzak4" type="Sprite2D" parent="."]
 position = Vector2(555, 711)
+texture = ExtResource("19_c0yhq")
+
+[node name="Krzak8" type="Sprite2D" parent="."]
+position = Vector2(595, 147)
 texture = ExtResource("19_c0yhq")
 
 [node name="Krzak2" type="Sprite2D" parent="."]
