@@ -23,7 +23,7 @@ unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("1_sul5r")]
 unique_name_in_owner = true
-position = Vector2(936, 833)
+position = Vector2(807, 812)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

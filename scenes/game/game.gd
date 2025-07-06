@@ -27,6 +27,8 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	Global.ui.bee_label.text = "%s" % bees.size()
+
 	var player_tile: Vector2i = Vector2i(int(player.position.x / 16), int(player.position.y / 16))
 	for x in 3:
 		for y in 3:
@@ -46,7 +48,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"SpawnBee"):
 		_spawn_bee()
 
-		Global.ui.bee_label.text = "%s" % bees.size()
+
 
 	if event.is_action_pressed(&"SpawnBeeHive"):
 		_spawn_beehive()

@@ -18,6 +18,7 @@ func _ready() -> void:
 	death_timer.timeout.connect(handle_death)
 
 func handle_death():
+	Global.game.bees.remove_at(Global.game.bees.find(self))
 	queue_free()
 
 func _process(delta: float) -> void:
