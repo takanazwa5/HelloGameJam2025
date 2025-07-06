@@ -181,7 +181,7 @@ func get_best_tile_for_bee(bee : WorkerBee, bee_array) -> Vector2:
 	if best_distance != INF:
 		return best_pos
 	else:
-		return bee_pos # Jeśli nie znaleziono żadnego CORRUPTED, zwracamy pozycję pszczoły
+		return bee_pos
 
 func get_tile_type(index : int) -> int:
 	if index == 1:
