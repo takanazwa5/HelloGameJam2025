@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=12 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
@@ -6,11 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="5_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://kx0rc8xji11i" path="res://features/main_beehive/main_beehive.tscn" id="5_lfrn8"]
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="6_87uf6"]
+[ext_resource type="Script" uid="uid://ctucrxxp1cfoy" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
+[ext_resource type="Texture2D" uid="uid://cuchypayd6i8" path="res://Textures/ui/mouse_left.png" id="8_2a8rs"]
 [ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2a8rs"]
 font = ExtResource("6_87uf6")
 font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdhmt"]
+font = ExtResource("6_87uf6")
+font_size = 6
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
@@ -99,6 +107,149 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "40"
 label_settings = SubResource("LabelSettings_2a8rs")
+
+[node name="Tutorial" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_87uf6")
+
+[node name="Tutorial1" type="PanelContainer" parent="CanvasLayer/Tutorial"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -38.0
+offset_right = -20.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Tutorial/Tutorial1"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Homo sapiens bez przerwy niszczy tereny zielone.
+Jako pszczoła musisz z tym walczyć.
+Ten pasek wskazuje poziom rozwoju fabryk w okolicy.
+(czyt. poziom trudności)"
+label_settings = SubResource("LabelSettings_bdhmt")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial1/Label"]
+layout_mode = 2
+offset_left = 148.0
+offset_right = 161.0
+offset_bottom = 29.0
+texture = ExtResource("8_2a8rs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tutorial2" type="PanelContainer" parent="CanvasLayer/Tutorial"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = -41.0
+offset_right = -130.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Tutorial/Tutorial2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Ten pasek wskazuje ilość dostępnego pyłku.
+Zbieraj kwiatki, aby uzupełnić zapasy."
+label_settings = SubResource("LabelSettings_bdhmt")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial2/Label"]
+layout_mode = 0
+offset_left = 148.0
+offset_right = 161.0
+offset_bottom = 29.0
+texture = ExtResource("8_2a8rs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tutorial3" type="PanelContainer" parent="CanvasLayer/Tutorial"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -67.0
+offset_right = -112.0
+offset_bottom = -38.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Tutorial/Tutorial3"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "W tym miejscu zobaczysz 
+stosunek zdrowego terenu 
+do zainfekowanego."
+label_settings = SubResource("LabelSettings_bdhmt")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial3/Label"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 8.0
+offset_right = 82.0
+offset_bottom = 37.0
+texture = ExtResource("8_2a8rs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tutorial4" type="PanelContainer" parent="CanvasLayer/Tutorial"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = 17.0
+offset_right = -112.0
+offset_bottom = 46.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Tutorial/Tutorial4"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Nie ułatwiamy pracy pszczołom.
+Masz okazję zobaczyć to z ich perspektywy.
+Powodzenia!"
+label_settings = SubResource("LabelSettings_bdhmt")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial4/Label"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = -8.0
+offset_right = 136.0
+offset_bottom = 21.0
+texture = ExtResource("8_2a8rs")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MainBeehive" parent="." instance=ExtResource("5_lfrn8")]
 position = Vector2(866, 827)

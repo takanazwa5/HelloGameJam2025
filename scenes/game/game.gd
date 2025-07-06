@@ -24,6 +24,7 @@ func _init() -> void:
 
 func _ready() -> void:
 	game_timer.timeout.connect(_on_game_timer_timeout)
+	get_tree().paused = true
 
 
 func _process(_delta: float) -> void:
