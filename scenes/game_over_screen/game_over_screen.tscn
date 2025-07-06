@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdx3b08w77eg7"]
+[gd_scene load_steps=3 format=3 uid="uid://cdx3b08w77eg7"]
 
 [ext_resource type="Script" uid="uid://dgg6nfjnsg24t" path="res://scenes/game_over_screen/game_over_screen.gd" id="1_l2cnm"]
+[ext_resource type="AudioStream" uid="uid://dyfyk3cr4pjns" path="res://audio/VerySadMusic.mp3" id="2_wndrr"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -41,3 +42,7 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "RETRY"
+
+[node name="VerySadMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wndrr")
+autoplay = true
