@@ -28,7 +28,7 @@ script = ExtResource("1_4ugtf")
 
 [node name="Level Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 45.0
+wait_time = 40.0
 autostart = true
 
 [node name="Corruption Timer" type="Timer" parent="."]
