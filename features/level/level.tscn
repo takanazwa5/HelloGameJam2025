@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://djf24yoj4wov6" path="res://Textures/tile/zepsuta woda/badwatertileset-7.png" id="49_myx6q"]
 [ext_resource type="Texture2D" uid="uid://bvitgl2s6myss" path="res://Textures/tile/zepsuta woda/badwatertileset-8.png" id="50_dyoel"]
 [ext_resource type="Texture2D" uid="uid://2b2v03iyruvs" path="res://Textures/tile/zepsuta woda/badwatertileset-9.png" id="51_6cwl5"]
-[ext_resource type="PackedScene" uid="uid://clmfhrqewjyir" path="res://features/landmarks/camping_site/camping_site.tscn" id="56_30qot"]
+[ext_resource type="PackedScene" uid="uid://bjw85451snou3" path="res://features/landmarks/camping_site/camping_site.tscn" id="56_30qot"]
 [ext_resource type="PackedScene" uid="uid://cag1wa2jimxfs" path="res://features/landmarks/forest/forest1.tscn" id="57_wbhtm"]
 [ext_resource type="PackedScene" uid="uid://bi0wt6nj1amp4" path="res://features/landmarks/forest/forest2.tscn" id="58_8ei34"]
 [ext_resource type="PackedScene" uid="uid://s53od2t0e16i" path="res://features/landmarks/factories/factories.tscn" id="59_tksdx"]
@@ -354,7 +354,7 @@ position = Vector2(-479, -324)
 position = Vector2(-345, 735)
 
 [node name="Forest2" parent="landmarks" instance=ExtResource("58_8ei34")]
-position = Vector2(-300, -704)
+position = Vector2(-297, -690)
 
 [node name="Factories" parent="landmarks" instance=ExtResource("59_tksdx")]
 position = Vector2(369, -786)
