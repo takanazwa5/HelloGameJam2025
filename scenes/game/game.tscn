@@ -1,14 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=13 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 [ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="5_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://kx0rc8xji11i" path="res://features/main_beehive/main_beehive.tscn" id="5_lfrn8"]
-[ext_resource type="Script" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
+[ext_resource type="Script" uid="uid://ctucrxxp1cfoy" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
 [ext_resource type="Texture2D" uid="uid://cuchypayd6i8" path="res://Textures/ui/mouse_left.png" id="8_2a8rs"]
 [ext_resource type="FontFile" uid="uid://bm7nyahvopy2w" path="res://Fonts/Pixel (47)/Diary of an 8-bit mage.otf" id="8_4j704"]
 [ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4j704"]
+font = ExtResource("8_4j704")
+font_size = 10
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2a8rs"]
 font = ExtResource("8_4j704")
@@ -37,15 +43,16 @@ position = Vector2(807, 812)
 
 [node name="GameTimeLabel" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-visible = false
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.5
-offset_right = 20.5
-offset_bottom = 23.0
-grow_horizontal = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -16.0
+offset_right = 35.0
+offset_bottom = -5.0
+grow_vertical = 0
 text = "00:00"
+label_settings = SubResource("LabelSettings_4j704")
 
 [node name="GameTimer" type="Timer" parent="CanvasLayer/GameTimeLabel"]
 unique_name_in_owner = true

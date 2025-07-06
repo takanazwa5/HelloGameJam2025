@@ -87,6 +87,7 @@ func update_pollution_progress():
 	Global.ui.pollution_label.text = str(snapped(ratio * 100, 0.1)) + "%"
 
 	if ratio < 0.05 && Global.factory._level >= 8:
+		Global.time_sec = Global.game.game_time
 		var game_over_scene: PackedScene = load("res://scenes/game_over_screen/game_over_screen.tscn")
 		get_tree().change_scene_to_packed(game_over_scene)
 

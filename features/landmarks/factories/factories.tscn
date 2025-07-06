@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://ufqdws3vq428" path="res://features/flower/sprites/krzak2.png" id="20_c4767"]
 [ext_resource type="Texture2D" uid="uid://ficjlfx5mldu" path="res://features/flower/sprites/krzak2kolor.png" id="21_dlusm"]
 [ext_resource type="PackedScene" uid="uid://cm0nfs0jp2d42" path="res://features/obstacles/koparka/koparka.tscn" id="22_kb811"]
-[ext_resource type="PackedScene" uid="uid://crjk3nscvbwi0" path="res://features/obstacles/smoke/smoke.tscn" id="24_c0yhq"]
+[ext_resource type="PackedScene" path="res://features/obstacles/smoke/smoke.tscn" id="24_c0yhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0yhq"]
 size = Vector2(64, 106)
