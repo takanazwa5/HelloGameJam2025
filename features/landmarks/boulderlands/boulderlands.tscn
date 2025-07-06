@@ -1,15 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1dhgye1djxw5"]
+[gd_scene load_steps=12 format=3 uid="uid://c1dhgye1djxw5"]
 
 [ext_resource type="PackedScene" uid="uid://b3y8ok10jihvp" path="res://features/obstacles/kamien/kamien2.tscn" id="1_p5okm"]
 [ext_resource type="PackedScene" uid="uid://bffcka3cm2e8e" path="res://features/obstacles/kamien/kamien.tscn" id="2_12jtp"]
+[ext_resource type="Texture2D" uid="uid://0m78xrs8ywt8" path="res://features/landmarks/camping_site/sprites/camping_stuff.png" id="3_12jtp"]
+[ext_resource type="PackedScene" uid="uid://cm0nfs0jp2d42" path="res://features/obstacles/koparka/koparka.tscn" id="4_nwe2g"]
+[ext_resource type="Texture2D" uid="uid://dyxq4trxfflr8" path="res://features/factory/sprites/BaseStation3x3.png" id="5_32anm"]
+[ext_resource type="Texture2D" uid="uid://barjhjwkm2hdj" path="res://features/factory/sprites/Administration4x6.png" id="6_44pp7"]
+[ext_resource type="Texture2D" uid="uid://dw568tipc2fux" path="res://features/factory/sprites/Pipe4x3.png" id="7_44pp7"]
+[ext_resource type="PackedScene" uid="uid://crjk3nscvbwi0" path="res://features/obstacles/smoke/smoke.tscn" id="8_k0prv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32anm"]
+size = Vector2(64, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0prv"]
+size = Vector2(64, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44pp7"]
+size = Vector2(48, 49)
 
 [node name="Boulderlands" type="Node2D"]
 
 [node name="Kamien" parent="." instance=ExtResource("1_p5okm")]
-position = Vector2(121, 109)
+position = Vector2(127, 110)
 
 [node name="Kamien9" parent="." instance=ExtResource("1_p5okm")]
-position = Vector2(268, 239)
+position = Vector2(275, 223)
 
 [node name="Kamien11" parent="." instance=ExtResource("1_p5okm")]
 position = Vector2(-9, 281)
@@ -23,11 +38,11 @@ position = Vector2(0, 61)
 scale = Vector2(-1, 1)
 
 [node name="Kamien20" parent="." instance=ExtResource("1_p5okm")]
-position = Vector2(95, 298)
+position = Vector2(79, 300)
 scale = Vector2(-1, 1)
 
 [node name="Kamien14" parent="." instance=ExtResource("1_p5okm")]
-position = Vector2(210, 363)
+position = Vector2(200, 369)
 scale = Vector2(-1, 1)
 
 [node name="Kamien19" parent="." instance=ExtResource("1_p5okm")]
@@ -64,7 +79,7 @@ position = Vector2(269, 162)
 scale = Vector2(-1, 1)
 
 [node name="Kamien7" parent="." instance=ExtResource("2_12jtp")]
-position = Vector2(129, 244)
+position = Vector2(272, 62)
 scale = Vector2(-1, 1)
 
 [node name="Kamien10" parent="." instance=ExtResource("2_12jtp")]
@@ -74,3 +89,253 @@ scale = Vector2(-1, 1)
 [node name="Kamien18" parent="." instance=ExtResource("2_12jtp")]
 position = Vector2(123, -247)
 scale = Vector2(-1, 1)
+
+[node name="Rocks17" type="Sprite2D" parent="."]
+position = Vector2(92, -297)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks18" type="Sprite2D" parent="."]
+position = Vector2(105, -214)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks19" type="Sprite2D" parent="."]
+position = Vector2(154, -158)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks20" type="Sprite2D" parent="."]
+position = Vector2(198, -200)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks21" type="Sprite2D" parent="."]
+position = Vector2(53, -125)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks22" type="Sprite2D" parent="."]
+position = Vector2(215, -49)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks23" type="Sprite2D" parent="."]
+position = Vector2(129, -48)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks24" type="Sprite2D" parent="."]
+position = Vector2(278, -120)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks25" type="Sprite2D" parent="."]
+position = Vector2(234, -4)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks26" type="Sprite2D" parent="."]
+position = Vector2(98, 26)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks27" type="Sprite2D" parent="."]
+position = Vector2(56, -26)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks28" type="Sprite2D" parent="."]
+position = Vector2(68, 90)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks29" type="Sprite2D" parent="."]
+position = Vector2(166, 85)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks30" type="Sprite2D" parent="."]
+position = Vector2(184, 14)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Rocks" type="Sprite2D" parent="Rocks30"]
+position = Vector2(63, 32)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks" type="Sprite2D" parent="Rocks30/Rocks"]
+position = Vector2(56, 159)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks2" type="Sprite2D" parent="Rocks30"]
+position = Vector2(73, 130)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Branches6" type="Sprite2D" parent="Rocks30/Rocks2"]
+position = Vector2(-29, 43)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Rocks" type="Sprite2D" parent="Rocks30/Rocks2"]
+position = Vector2(56, 159)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks3" type="Sprite2D" parent="Rocks30"]
+position = Vector2(-27, 151)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Branches6" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(-71, 164)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches7" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(-116, 46)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches8" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(-58, -64)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches9" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(90, -160)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches10" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(20, -229)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Branches11" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(-93, -244)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Rocks" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(56, 159)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Koparka" parent="Rocks30/Rocks3" instance=ExtResource("4_nwe2g")]
+position = Vector2(-80, -186)
+
+[node name="Koparka2" parent="Rocks30/Rocks3" instance=ExtResource("4_nwe2g")]
+position = Vector2(37, -320)
+scale = Vector2(-1, 1)
+
+[node name="Koparka3" parent="Rocks30/Rocks3" instance=ExtResource("4_nwe2g")]
+position = Vector2(10, -60)
+
+[node name="Koparka4" parent="Rocks30/Rocks3" instance=ExtResource("4_nwe2g")]
+position = Vector2(81, 48)
+scale = Vector2(-1, 1)
+
+[node name="Koparka5" parent="Rocks30/Rocks3" instance=ExtResource("4_nwe2g")]
+position = Vector2(-90, 230)
+
+[node name="BaseStation3x3" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(97, 147)
+texture = ExtResource("5_32anm")
+
+[node name="Administration4x6" type="Sprite2D" parent="Rocks30/Rocks3"]
+position = Vector2(41, 116)
+texture = ExtResource("6_44pp7")
+
+[node name="Pipe4x3" type="Sprite2D" parent="Rocks30"]
+position = Vector2(-50, 275)
+texture = ExtResource("7_44pp7")
+
+[node name="Pipe4x4" type="Sprite2D" parent="Rocks30"]
+position = Vector2(-50, 323)
+texture = ExtResource("7_44pp7")
+
+[node name="Smoke" parent="Rocks30" instance=ExtResource("8_k0prv")]
+position = Vector2(-85, 194)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Smoke2" parent="Rocks30" instance=ExtResource("8_k0prv")]
+position = Vector2(-80, 249)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Rocks4" type="Sprite2D" parent="Rocks30"]
+position = Vector2(-68, 31)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks" type="Sprite2D" parent="Rocks30/Rocks4"]
+position = Vector2(35, 195)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks2" type="Sprite2D" parent="Rocks30/Rocks4"]
+position = Vector2(-110, 34)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Rocks3" type="Sprite2D" parent="Rocks30/Rocks4"]
+position = Vector2(175, 36)
+texture = ExtResource("3_12jtp")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(198, 292)
+shape = SubResource("RectangleShape2D_32anm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(134, 313)
+shape = SubResource("RectangleShape2D_k0prv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(254, 320.5)
+shape = SubResource("RectangleShape2D_44pp7")

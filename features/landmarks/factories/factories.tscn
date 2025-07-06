@@ -880,3 +880,6 @@ shape = SubResource("RectangleShape2D_dlusm")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(565, 170)
 shape = SubResource("RectangleShape2D_dlusm")
+
+[node name="Koparka5" parent="." instance=ExtResource("22_kb811")]
+position = Vector2(-202, 550)

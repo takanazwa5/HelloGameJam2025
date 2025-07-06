@@ -41,6 +41,12 @@ position = Vector2(-364, 49)
 [node name="Wiatrak2" parent="." instance=ExtResource("1_5aftk")]
 position = Vector2(82, -10)
 
+[node name="Wiatrak8" parent="." instance=ExtResource("1_5aftk")]
+position = Vector2(105, -265)
+
+[node name="Wiatrak9" parent="." instance=ExtResource("1_5aftk")]
+position = Vector2(389, -139)
+
 [node name="Wiatrak3" parent="." instance=ExtResource("1_5aftk")]
 position = Vector2(256, 81)
 
@@ -55,6 +61,12 @@ position = Vector2(97, 198)
 
 [node name="Kamien14" parent="." instance=ExtResource("5_nuq22")]
 position = Vector2(97, 198)
+
+[node name="Kamien20" parent="." instance=ExtResource("5_nuq22")]
+position = Vector2(125, 363)
+
+[node name="Kamien21" parent="." instance=ExtResource("5_nuq22")]
+position = Vector2(-66, 432)
 
 [node name="Kamien17" parent="." instance=ExtResource("5_nuq22")]
 position = Vector2(-189, 427)
@@ -105,7 +117,43 @@ region_enabled = true
 region_rect = Rect2(2, 3, 6, 6)
 
 [node name="Mushroom16" type="Sprite2D" parent="Kamien15"]
-position = Vector2(100, 510)
+position = Vector2(233, 525)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom20" type="Sprite2D" parent="Kamien15"]
+position = Vector2(122, 509)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom21" type="Sprite2D" parent="Kamien15"]
+position = Vector2(339, 416)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom22" type="Sprite2D" parent="Kamien15"]
+position = Vector2(245, 423)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom23" type="Sprite2D" parent="Kamien15"]
+position = Vector2(336, 560)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom24" type="Sprite2D" parent="Kamien15"]
+position = Vector2(227, 611)
+texture = ExtResource("6_6dbm6")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Mushroom25" type="Sprite2D" parent="Kamien15"]
+position = Vector2(153, 578)
 texture = ExtResource("6_6dbm6")
 region_enabled = true
 region_rect = Rect2(2, 3, 6, 6)
@@ -140,6 +188,14 @@ scale = Vector2(-1, 1)
 
 [node name="Kamien10" parent="." instance=ExtResource("5_nuq22")]
 position = Vector2(418, 152)
+scale = Vector2(-1, 1)
+
+[node name="Kamien18" parent="." instance=ExtResource("5_nuq22")]
+position = Vector2(467, 233)
+scale = Vector2(-1, 1)
+
+[node name="Kamien19" parent="." instance=ExtResource("5_nuq22")]
+position = Vector2(379, 253)
 scale = Vector2(-1, 1)
 
 [node name="Kamien2" parent="." instance=ExtResource("6_vc4t0")]
@@ -183,8 +239,60 @@ texture = ExtResource("11_jirf8")
 position = Vector2(214, 207)
 texture = ExtResource("11_jirf8")
 
+[node name="Krzak16" type="Sprite2D" parent="."]
+position = Vector2(335, 418)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak23" type="Sprite2D" parent="."]
+position = Vector2(433, 446)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak17" type="Sprite2D" parent="."]
+position = Vector2(187, 359)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak19" type="Sprite2D" parent="."]
+position = Vector2(440, 360)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak18" type="Sprite2D" parent="."]
+position = Vector2(35, 432)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak21" type="Sprite2D" parent="."]
+position = Vector2(-33, 359)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak22" type="Sprite2D" parent="."]
+position = Vector2(185, 443)
+texture = ExtResource("11_jirf8")
+
 [node name="Krzak2Kolor" type="Sprite2D" parent="."]
 position = Vector2(201, -29)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor6" type="Sprite2D" parent="."]
+position = Vector2(419, 305)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor7" type="Sprite2D" parent="."]
+position = Vector2(392, 386)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor8" type="Sprite2D" parent="."]
+position = Vector2(218, 394)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor9" type="Sprite2D" parent="."]
+position = Vector2(403, 434)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor10" type="Sprite2D" parent="."]
+position = Vector2(293, 445)
+texture = ExtResource("10_vc4t0")
+
+[node name="Krzak2Kolor11" type="Sprite2D" parent="."]
+position = Vector2(106, 392)
 texture = ExtResource("10_vc4t0")
 
 [node name="Krzak2Kolor2" type="Sprite2D" parent="."]
@@ -219,6 +327,26 @@ texture = ExtResource("11_k1kv1")
 position = Vector2(201, 120)
 texture = ExtResource("11_k1kv1")
 
+[node name="Krzak24" type="Sprite2D" parent="."]
+position = Vector2(38, -250)
+texture = ExtResource("11_k1kv1")
+
+[node name="Krzak11" type="Sprite2D" parent="."]
+position = Vector2(415, 277)
+texture = ExtResource("11_k1kv1")
+
+[node name="Krzak12" type="Sprite2D" parent="."]
+position = Vector2(341, 371)
+texture = ExtResource("11_k1kv1")
+
+[node name="Krzak15" type="Sprite2D" parent="."]
+position = Vector2(329, 189)
+texture = ExtResource("11_k1kv1")
+
+[node name="Krzak20" type="Sprite2D" parent="."]
+position = Vector2(470, 434)
+texture = ExtResource("11_k1kv1")
+
 [node name="Krzak14" type="Sprite2D" parent="."]
 position = Vector2(230, -228)
 texture = ExtResource("11_k1kv1")
@@ -231,6 +359,10 @@ texture = ExtResource("10_vlfte")
 position = Vector2(-245, 276)
 texture = ExtResource("10_vlfte")
 
+[node name="Krzak1Maly4" type="Sprite2D" parent="."]
+position = Vector2(412, 405)
+texture = ExtResource("10_vlfte")
+
 [node name="Krzak3" type="Sprite2D" parent="."]
 position = Vector2(-14, -125)
 texture = ExtResource("11_jirf8")
@@ -241,6 +373,10 @@ texture = ExtResource("11_jirf8")
 
 [node name="Krzak7" type="Sprite2D" parent="."]
 position = Vector2(-283, -248)
+texture = ExtResource("11_jirf8")
+
+[node name="Krzak25" type="Sprite2D" parent="."]
+position = Vector2(152, -131)
 texture = ExtResource("11_jirf8")
 
 [node name="Krzak13" type="Sprite2D" parent="."]
@@ -256,6 +392,36 @@ position = Vector2(-396, 300)
 [node name="Drzewo5" parent="." instance=ExtResource("7_k1kv1")]
 position = Vector2(321, 281)
 
+[node name="Drzewo10" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(464, 292)
+
+[node name="Drzewo15" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(402, 351)
+
+[node name="Drzewo21" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(-16, 423)
+
+[node name="Drzewo16" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(441, 213)
+
+[node name="Drzewo17" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(273, 359)
+
+[node name="Drzewo25" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(232, 433)
+
+[node name="Drzewo26" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(475, 389)
+
+[node name="Drzewo22" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(106, 433)
+
+[node name="Drzewo23" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(18, 360)
+
+[node name="Drzewo18" parent="." instance=ExtResource("7_k1kv1")]
+position = Vector2(377, 428)
+
 [node name="Drzewo4" parent="." instance=ExtResource("12_6dbm6")]
 position = Vector2(-36, -149)
 
@@ -269,7 +435,28 @@ position = Vector2(-135, 369)
 position = Vector2(-261, 248)
 
 [node name="Drzewo8" parent="." instance=ExtResource("12_6dbm6")]
-position = Vector2(84, 391)
+position = Vector2(72, 382)
+
+[node name="Drzewo24" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(-106, 423)
+
+[node name="Drzewo11" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(442, 401)
+
+[node name="Drzewo12" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(359, 312)
+
+[node name="Drzewo13" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(289, 405)
+
+[node name="Drzewo19" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(153, 412)
+
+[node name="Drzewo20" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(462, 166)
+
+[node name="Drzewo14" parent="." instance=ExtResource("12_6dbm6")]
+position = Vector2(260, 288)
 
 [node name="BaseStation3x3" type="Sprite2D" parent="."]
 position = Vector2(-422, 228)

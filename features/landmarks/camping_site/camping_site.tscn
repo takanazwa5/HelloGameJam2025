@@ -28,6 +28,12 @@ texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(3, 11, 10, 9)
 
+[node name="Branches12" type="Sprite2D" parent="Trash"]
+position = Vector2(423, 258)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
 [node name="Branches3" type="Sprite2D" parent="Trash"]
 position = Vector2(151, 62)
 texture = ExtResource("1_5p5au")
@@ -117,6 +123,14 @@ texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(2, 25, 7, 3)
 
+[node name="Beer_Bottle16" type="Sprite2D" parent="Trash"]
+position = Vector2(336, 273)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 25, 7, 3)
+
 [node name="Beer_Bottle7" type="Sprite2D" parent="Trash"]
 position = Vector2(170, 162)
 rotation = 3.14159
@@ -157,6 +171,26 @@ region_rect = Rect2(12, 22, 3, 7)
 
 [node name="Beer_Bottle6" type="Sprite2D" parent="Trash"]
 position = Vector2(247, 105)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(12, 22, 3, 7)
+
+[node name="Branches11" type="Sprite2D" parent="Trash"]
+position = Vector2(409, 336)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(3, 11, 10, 9)
+
+[node name="Beer_Bottle14" type="Sprite2D" parent="Trash"]
+position = Vector2(398, 325)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 25, 7, 3)
+
+[node name="Beer_Bottle15" type="Sprite2D" parent="Trash"]
+position = Vector2(436, 328)
 texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(12, 22, 3, 7)
@@ -330,6 +364,12 @@ texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(18, 17, 11, 12)
 
+[node name="Chair8" type="Sprite2D" parent="."]
+position = Vector2(459, 337)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(18, 17, 11, 12)
+
 [node name="Chair4" type="Sprite2D" parent="."]
 position = Vector2(310, 13)
 texture = ExtResource("1_5p5au")
@@ -357,6 +397,13 @@ texture = ExtResource("1_5p5au")
 region_enabled = true
 region_rect = Rect2(18, 17, 11, 12)
 
+[node name="Chair9" type="Sprite2D" parent="."]
+position = Vector2(299, 265)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(18, 17, 11, 12)
+
 [node name="Tent_Red" type="Sprite2D" parent="."]
 position = Vector2(289, -1)
 texture = ExtResource("2_si31y")
@@ -365,6 +412,12 @@ region_rect = Rect2(62, 0, 30, 30)
 
 [node name="Tent_Red2" type="Sprite2D" parent="."]
 position = Vector2(194, 137)
+texture = ExtResource("2_si31y")
+region_enabled = true
+region_rect = Rect2(62, 0, 30, 30)
+
+[node name="Tent_Red5" type="Sprite2D" parent="."]
+position = Vector2(400, 237)
 texture = ExtResource("2_si31y")
 region_enabled = true
 region_rect = Rect2(62, 0, 30, 30)
@@ -405,6 +458,25 @@ texture = ExtResource("2_si31y")
 region_enabled = true
 region_rect = Rect2(30.7523, 0.0357223, 30.2126, 30.0433)
 
+[node name="Mushroom13" type="Sprite2D" parent="."]
+position = Vector2(310, 285)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(2, 3, 6, 6)
+
+[node name="Rocks13" type="Sprite2D" parent="."]
+position = Vector2(317, 276)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(22, 4, 8, 5)
+
+[node name="Tent_Blue5" type="Sprite2D" parent="."]
+position = Vector2(323, 258)
+texture = ExtResource("2_si31y")
+region_enabled = true
+region_rect = Rect2(30.7523, 0.0357223, 30.2126, 30.0433)
+
 [node name="Tent_Green" type="Sprite2D" parent="."]
 position = Vector2(59, 62)
 texture = ExtResource("2_si31y")
@@ -413,6 +485,19 @@ region_rect = Rect2(0, 0, 30, 30)
 
 [node name="Tent_Green2" type="Sprite2D" parent="."]
 position = Vector2(229, 95)
+texture = ExtResource("2_si31y")
+region_enabled = true
+region_rect = Rect2(0, 0, 30, 30)
+
+[node name="Rocks12" type="Sprite2D" parent="."]
+position = Vector2(398, 333)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_5p5au")
+region_enabled = true
+region_rect = Rect2(11, 5, 8, 4)
+
+[node name="Tent_Green4" type="Sprite2D" parent="."]
+position = Vector2(418, 318)
 texture = ExtResource("2_si31y")
 region_enabled = true
 region_rect = Rect2(0, 0, 30, 30)
@@ -431,6 +516,9 @@ position = Vector2(-176, -80)
 
 [node name="Ognisko2" parent="." instance=ExtResource("3_si31y")]
 position = Vector2(200, 159)
+
+[node name="Ognisko5" parent="." instance=ExtResource("3_si31y")]
+position = Vector2(439, 345)
 
 [node name="Ognisko3" parent="." instance=ExtResource("3_si31y")]
 position = Vector2(289, 22)
@@ -546,6 +634,22 @@ texture = ExtResource("9_3ohc4")
 
 [node name="Krzak2Kolor2" type="Sprite2D" parent="."]
 position = Vector2(428, 110)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor5" type="Sprite2D" parent="."]
+position = Vector2(372, 240)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor6" type="Sprite2D" parent="."]
+position = Vector2(126, 235)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor7" type="Sprite2D" parent="."]
+position = Vector2(-57, 119)
+texture = ExtResource("8_l5grp")
+
+[node name="Krzak2Kolor8" type="Sprite2D" parent="."]
+position = Vector2(-27, 9)
 texture = ExtResource("8_l5grp")
 
 [node name="Krzak1Maly" type="Sprite2D" parent="."]
