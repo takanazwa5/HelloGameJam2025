@@ -1,8 +1,8 @@
 class_name MainMenu extends Control
 
 
-@onready var start_button: Button = %StartButton
-@onready var quit_button: Button = %QuitButton
+@onready var start_button: TextureButton = %StartButton
+@onready var quit_button: TextureButton = %QuitButton
 
 
 func _ready() -> void:
