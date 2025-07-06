@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm0nfs0jp2d42"]
+
+[ext_resource type="Texture2D" uid="uid://bwfme6pswbgx5" path="res://features/obstacles/koparka/kopara.png" id="1_gtdvm"]
+[ext_resource type="Script" uid="uid://4or43jtsq8wi" path="res://features/killable/killable.gd" id="1_jrsq5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrsq5"]
+atlas = ExtResource("1_gtdvm")
+region = Rect2(0, 0, 48, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqcwr"]
+atlas = ExtResource("1_gtdvm")
+region = Rect2(48, 0, 48, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukvly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrsq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqcwr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrsq5"]
+size = Vector2(36, 33)
+
+[node name="Koparka" type="Area2D"]
+script = ExtResource("1_jrsq5")
+
+[node name="Kopara" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ukvly")
+autoplay = "default"
+frame_progress = 0.306492
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_jrsq5")
