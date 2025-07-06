@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://crjk3nscvbwi0"]
+
+[ext_resource type="Texture2D" uid="uid://15gblnph63x6" path="res://features/obstacles/smoke/smoke.png" id="1_pygf0"]
+[ext_resource type="Script" uid="uid://4or43jtsq8wi" path="res://features/killable/killable.gd" id="1_xg3vh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg3vh"]
+size = Vector2(19.799, 100.409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyh18"]
+atlas = ExtResource("1_pygf0")
+region = Rect2(0, 0, 90, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7s1d"]
+atlas = ExtResource("1_pygf0")
+region = Rect2(90, 0, 90, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4ynn"]
+atlas = ExtResource("1_pygf0")
+region = Rect2(180, 0, 90, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8wa0"]
+atlas = ExtResource("1_pygf0")
+region = Rect2(270, 0, 90, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eymp8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyh18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7s1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4ynn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8wa0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Smoke" type="Area2D"]
+script = ExtResource("1_xg3vh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 6)
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_xg3vh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eymp8")
+autoplay = "default"
+frame_progress = 0.215928

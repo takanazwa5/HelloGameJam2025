@@ -11,8 +11,8 @@ func _ready() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	var game_scene: PackedScene = load("res://scenes/game/game.tscn")
-	get_tree().change_scene_to_packed(game_scene)
+	var story_scene: PackedScene = load("res://scenes/story/story.tscn")
+	get_tree().change_scene_to_packed(story_scene)
 
 
 func _on_quit_button_pressed() -> void:
