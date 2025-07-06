@@ -2,10 +2,6 @@ class_name Factory extends Node2D
 
 var _level: int = 0
 
-@onready var administration: Sprite2D = %Administration
-@onready var workshop: Sprite2D = %Workshop
-@onready var pipe: Sprite2D = %Pipe
-@onready var storage: Sprite2D = %Storage
 @onready var slow_area: Area2D = $Area2D
 @onready var timer: Timer = $LevelTimer
 @onready var corruption_timer: Timer = $CorruptionTimer

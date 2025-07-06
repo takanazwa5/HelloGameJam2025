@@ -1,7 +1,7 @@
 class_name GameOverScreen extends Control
 
 
-@onready var retry_button: Button = %RetryButton
+@onready var retry_button: TextureButton = %RetryButton
 
 
 func _ready() -> void:

@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdx3b08w77eg7"]
+[gd_scene load_steps=10 format=3 uid="uid://cdx3b08w77eg7"]
 
 [ext_resource type="Script" uid="uid://dgg6nfjnsg24t" path="res://scenes/game_over_screen/game_over_screen.gd" id="1_l2cnm"]
+[ext_resource type="Texture2D" uid="uid://dwljelex06dv2" path="res://scenes/game_over_screen/endscreen.png" id="2_26s7e"]
 [ext_resource type="AudioStream" uid="uid://dyfyk3cr4pjns" path="res://audio/VerySadMusic.mp3" id="2_wndrr"]
+[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="3_2so18"]
+[ext_resource type="Texture2D" uid="uid://dj2usxcjps83x" path="res://Textures/ui/hotbar/wide_button.png" id="4_rnelw"]
+[ext_resource type="Texture2D" uid="uid://cgi2aqoj35l7t" path="res://Textures/ui/hotbar/wide_button-press.png" id="5_xq88e"]
+[ext_resource type="Texture2D" uid="uid://dcmik0faacihl" path="res://Textures/ui/hotbar/wide_button-hover.png" id="6_hdc4n"]
+[ext_resource type="Script" path="res://features/main_menu/button_animation.gd" id="7_c1b6t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jq7k1"]
+font = ExtResource("3_2so18")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -11,6 +22,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l2cnm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_26s7e")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -26,8 +46,9 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "GEJM OVER"
+label_settings = SubResource("LabelSettings_jq7k1")
 
-[node name="RetryButton" type="Button" parent="."]
+[node name="RetryButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -35,13 +56,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = 19.0
-offset_right = 28.0
-offset_bottom = 50.0
+offset_left = -24.0
+offset_top = 26.0
+offset_right = 24.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "RETRY"
+texture_normal = ExtResource("4_rnelw")
+texture_pressed = ExtResource("5_xq88e")
+texture_hover = ExtResource("6_hdc4n")
+script = ExtResource("7_c1b6t")
+
+[node name="StartLabel" type="Label" parent="RetryButton"]
+layout_mode = 2
+offset_right = 48.0
+offset_bottom = 17.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_2so18")
+theme_override_font_sizes/font_size = 8
+text = "Retry"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VerySadMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wndrr")
