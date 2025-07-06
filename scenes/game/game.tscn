@@ -5,19 +5,19 @@
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
 [ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="5_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://kx0rc8xji11i" path="res://features/main_beehive/main_beehive.tscn" id="5_lfrn8"]
-[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="6_87uf6"]
-[ext_resource type="Script" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
+[ext_resource type="Script" uid="uid://ctucrxxp1cfoy" path="res://scenes/game/tutorial.gd" id="7_87uf6"]
 [ext_resource type="Texture2D" uid="uid://cuchypayd6i8" path="res://Textures/ui/mouse_left.png" id="8_2a8rs"]
+[ext_resource type="FontFile" uid="uid://bm7nyahvopy2w" path="res://Fonts/Pixel (47)/Diary of an 8-bit mage.otf" id="8_4j704"]
 [ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2a8rs"]
-font = ExtResource("6_87uf6")
+font = ExtResource("8_4j704")
 font_size = 8
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bdhmt"]
-font = ExtResource("6_87uf6")
+font = ExtResource("8_4j704")
 font_size = 6
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
@@ -145,8 +145,9 @@ label_settings = SubResource("LabelSettings_bdhmt")
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial1/Label"]
 layout_mode = 2
 offset_left = 148.0
+offset_top = -1.0
 offset_right = 161.0
-offset_bottom = 29.0
+offset_bottom = 28.0
 texture = ExtResource("8_2a8rs")
 expand_mode = 1
 stretch_mode = 5
@@ -244,9 +245,9 @@ label_settings = SubResource("LabelSettings_bdhmt")
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial/Tutorial4/Label"]
 layout_mode = 0
 offset_left = 123.0
-offset_top = -8.0
+offset_top = 9.0
 offset_right = 136.0
-offset_bottom = 21.0
+offset_bottom = 38.0
 texture = ExtResource("8_2a8rs")
 expand_mode = 1
 stretch_mode = 5

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dew7m6ikx6mwt"]
 
 [ext_resource type="Script" uid="uid://xix6b1ncpie3" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
-[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_eg8ul"]
+[ext_resource type="FontFile" uid="uid://bm7nyahvopy2w" path="res://Fonts/Pixel (47)/Diary of an 8-bit mage.otf" id="2_3hw0v"]
 [ext_resource type="Texture2D" uid="uid://hulq0m426efc" path="res://Textures/ui/pasek trudności/difficultybar-empty.png" id="3_gbwgi"]
 [ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="3_pvfrv"]
 [ext_resource type="Texture2D" uid="uid://xcq8vl6nlrd8" path="res://features/button_hints/bee.tres" id="4_3hw0v"]
@@ -38,7 +38,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_fonts/font = ExtResource("2_3hw0v")
 theme_override_font_sizes/font_size = 7
 text = "100%"
 horizontal_alignment = 1
@@ -52,7 +52,7 @@ offset_right = 41.0
 offset_bottom = 17.0
 size_flags_vertical = 1
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_fonts/font = ExtResource("2_3hw0v")
 theme_override_font_sizes/font_size = 7
 text = "0"
 
@@ -83,7 +83,7 @@ offset_top = 66.0
 offset_right = 315.0
 offset_bottom = 83.0
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_fonts/font = ExtResource("2_3hw0v")
 theme_override_font_sizes/font_size = 7
 text = "1"
 horizontal_alignment = 1
@@ -96,7 +96,7 @@ offset_top = -1.0
 offset_right = 171.0
 offset_bottom = 16.0
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_fonts/font = ExtResource("2_3hw0v")
 theme_override_font_sizes/font_size = 7
 text = "100%"
 horizontal_alignment = 1
@@ -175,6 +175,6 @@ offset_right = 41.0
 offset_bottom = 34.0
 size_flags_vertical = 1
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_eg8ul")
+theme_override_fonts/font = ExtResource("2_3hw0v")
 theme_override_font_sizes/font_size = 7
 text = "0"
