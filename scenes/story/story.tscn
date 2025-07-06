@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl48ou6mbtjnr"]
+[gd_scene load_steps=8 format=3 uid="uid://dl48ou6mbtjnr"]
 
 [ext_resource type="Script" uid="uid://cjt7o8j2q6wda" path="res://scenes/story/story.gd" id="1_8slj2"]
 [ext_resource type="Texture2D" uid="uid://bojexur3f6l4i" path="res://scenes/story/story1.png" id="1_vb06b"]
 [ext_resource type="Texture2D" uid="uid://bhwkvmfp0qxew" path="res://scenes/story/story2.png" id="2_8slj2"]
+[ext_resource type="Texture2D" uid="uid://0w51ebuq8ecx" path="res://scenes/story/story3.png" id="4_0p3y6"]
 
 [sub_resource type="Animation" id="Animation_0p3y6"]
 length = 0.001
@@ -42,10 +43,22 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_8slj2"]
 resource_name = "story"
-length = 12.5
+length = 17.5
 step = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -54,7 +67,7 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 10, 12.5),
+"times": PackedFloat32Array(0, 2.5, 15, 17.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -79,6 +92,18 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(5, 7.5, 10, 12.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(10, 12.4639, 15, 17.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -127,6 +152,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_8slj2")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0p3y6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
