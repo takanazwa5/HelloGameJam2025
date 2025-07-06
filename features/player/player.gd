@@ -27,7 +27,7 @@ var pollen: int = 100:
 var honey: int = 0:
 	set(value):
 		honey = value
-		ui.honey_label.text = "Honey: %s" % honey
+		ui.honey_label.text = str(honey)
 
 
 @onready var sprite: AnimatedSprite2D = %Sprite
@@ -70,7 +70,7 @@ func die() -> void:
 	tween.parallel().tween_property(sprite, ^"self_modulate", Color(1.0, 0.0, 0.0), 0.5)
 	tween.chain().tween_property(self, ^"position:y", position.y + 8.0, 0.5)
 	tween.parallel().tween_property(sprite, ^"self_modulate", Color(1.0, 1.0, 1.0), 0.5)
-	tween.chain().tween_property(self, ^"position", Vector2(0.0, 0.0), 1.0)
+	tween.chain().tween_property(self, ^"position", Vector2(936.0, 833.0), 1.0)
 	await tween.finished
 	velocity = Vector2.ZERO
 	can_move = true

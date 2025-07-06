@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://clmfhrqewjyir"]
+[gd_scene load_steps=7 format=3 uid="uid://clmfhrqewjyir"]
 
 [ext_resource type="Texture2D" uid="uid://0m78xrs8ywt8" path="res://features/landmarks/camping_site/sprites/camping_stuff.png" id="1_5p5au"]
 [ext_resource type="Texture2D" uid="uid://78e8l1gmy3gw" path="res://features/landmarks/camping_site/sprites/camping_tents.png" id="2_si31y"]
 [ext_resource type="PackedScene" uid="uid://c71c4f8mgpjkw" path="res://features/killable/ognisko/ognisko.tscn" id="3_si31y"]
 [ext_resource type="PackedScene" uid="uid://2k0xt1odyegs" path="res://features/obstacles/drzewo/drzewo.tscn" id="4_okre7"]
 [ext_resource type="PackedScene" uid="uid://bx8exhk5nq3fu" path="res://features/obstacles/drzewo/drzewo2.tscn" id="5_wm32s"]
-[ext_resource type="PackedScene" uid="uid://bffcka3cm2e8e" path="res://features/obstacles/kamien/kamien.tscn" id="6_g045t"]
-[ext_resource type="PackedScene" uid="uid://dtrr5yir1h7q5" path="res://features/obstacles/kamien/kamien2.tscn" id="7_cm5xo"]
+[ext_resource type="PackedScene" uid="uid://dtrr5yir1h7q5" path="res://features/obstacles/kamien/kamien.tscn" id="7_cm5xo"]
 
 [node name="CampingSite" type="Node2D"]
 
@@ -395,14 +394,14 @@ position = Vector2(411, 83)
 [node name="Drzewo10" parent="." instance=ExtResource("5_wm32s")]
 position = Vector2(-32, -49)
 
-[node name="Kamien" parent="." instance=ExtResource("6_g045t")]
+[node name="Kamien" parent="." instance=ExtResource("7_cm5xo")]
 position = Vector2(-125, -3)
 
-[node name="Kamien4" parent="." instance=ExtResource("6_g045t")]
+[node name="Kamien4" parent="." instance=ExtResource("7_cm5xo")]
 position = Vector2(398, -87)
 scale = Vector2(-1, 1)
 
-[node name="Kamien5" parent="." instance=ExtResource("6_g045t")]
+[node name="Kamien5" parent="." instance=ExtResource("7_cm5xo")]
 position = Vector2(155, 274)
 scale = Vector2(-1, 1)
 

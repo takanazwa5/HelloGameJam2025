@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dew7m6ikx6mwt"]
+[gd_scene load_steps=12 format=3 uid="uid://dew7m6ikx6mwt"]
 
 [ext_resource type="Script" uid="uid://xix6b1ncpie3" path="res://features/game_user_interface/user_interface.gd" id="1_s88id"]
 [ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="2_eg8ul"]
 [ext_resource type="Texture2D" uid="uid://hulq0m426efc" path="res://Textures/ui/pasek trudności/difficultybar-empty.png" id="3_gbwgi"]
+[ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="3_pvfrv"]
+[ext_resource type="Texture2D" uid="uid://xcq8vl6nlrd8" path="res://features/button_hints/bee.tres" id="4_3hw0v"]
 [ext_resource type="Texture2D" uid="uid://7xq3vj480ghu" path="res://Textures/ui/pasek trudności/difficultybar-full.png" id="4_o3qup"]
 [ext_resource type="Texture2D" uid="uid://cayubgaouqgc" path="res://Textures/ui/pasek pyłku/pollenbar-empty.png" id="5_jvitl"]
 [ext_resource type="Texture2D" uid="uid://bn2jlqjrxe6n5" path="res://Textures/ui/pasek zepsucia/pollutionbar-bad.png" id="5_k8eol"]
@@ -10,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bn0crehgvtbty" path="res://Textures/ui/pasek zepsucia/pollutionbar-good.png" id="6_pvfrv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eg8ul"]
-load_path = "res://.godot/imported/2difficultybar-empty.png-f9a9a46f3c24471aab75180e0a44f23d.ctex"
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -43,30 +44,43 @@ text = "100%"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HoneyContainer" type="MarginContainer" parent="."]
+[node name="Honeylabel" type="Label" parent="."]
 layout_mode = 2
-offset_left = 16.0
-offset_top = 3.0
-offset_right = 69.0
-offset_bottom = 32.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Honeylabel" type="Label" parent="HoneyContainer"]
-layout_mode = 2
+offset_left = 37.0
+offset_top = 9.0
+offset_right = 41.0
+offset_bottom = 17.0
 size_flags_vertical = 1
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
 theme_override_font_sizes/font_size = 7
-text = "Honey:"
+text = "0"
+
+[node name="HoneyIcon" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 33.0
+offset_bottom = 17.0
+texture = ExtResource("3_pvfrv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BeeIcon" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 23.0
+offset_top = 24.0
+offset_right = 33.0
+offset_bottom = 34.0
+texture = ExtResource("4_3hw0v")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="LevelLabel" type="Label" parent="."]
 layout_mode = 2
-offset_left = 303.0
+offset_left = 321.0
 offset_top = 64.0
-offset_right = 315.0
+offset_right = 333.0
 offset_bottom = 81.0
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
@@ -76,6 +90,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PollutionLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 153.0
 offset_top = -1.0
 offset_right = 171.0
@@ -152,21 +167,14 @@ fill_mode = 3
 texture_under = ExtResource("5_jvitl")
 texture_progress = ExtResource("6_lpmk0")
 
-[node name="BeeContainer" type="MarginContainer" parent="."]
+[node name="BeeLabel" type="Label" parent="."]
 layout_mode = 2
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 70.0
-offset_bottom = 38.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="BeeLabel" type="Label" parent="BeeContainer"]
-layout_mode = 2
+offset_left = 37.0
+offset_top = 26.0
+offset_right = 41.0
+offset_bottom = 34.0
 size_flags_vertical = 1
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_eg8ul")
 theme_override_font_sizes/font_size = 7
-text = "Bees: 0"
+text = "0"

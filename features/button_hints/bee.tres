@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://xcq8vl6nlrd8"]
+
+[ext_resource type="Texture2D" uid="uid://vtt7em3y0o2l" path="res://features/beehive/bee_small.png" id="1_a78jh"]
+
+[resource]
+atlas = ExtResource("1_a78jh")
+region = Rect2(0, 0, 13, 10)

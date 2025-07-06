@@ -9,6 +9,7 @@ const BEEHIVE: PackedScene = preload("res://features/beehive/beehive.tscn")
 @onready var player: Player = %Player
 @onready var game_time_label: Label = %GameTimeLabel
 @onready var game_timer: Timer = %GameTimer
+@onready var bee_cost_label: Label = %BeeCostLabel
 
 
 var bee_cost: int = 10
@@ -40,7 +41,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"SpawnBee"):
 		_spawn_bee()
 
-		Global.ui.bee_label.text = "Bees: %s" % bees.size()
+		Global.ui.bee_label.text = "%s" % bees.size()
 
 	if event.is_action_pressed(&"SpawnBeeHive"):
 		_spawn_beehive()
@@ -51,6 +52,7 @@ func _spawn_bee() -> void:
 
 	player.honey -= bee_cost
 	bee_cost += 5
+	bee_cost_label.text = str(bee_cost)
 	var new_bee = BEE.instantiate()
 	add_child(new_bee)
 	new_bee.position = player.position

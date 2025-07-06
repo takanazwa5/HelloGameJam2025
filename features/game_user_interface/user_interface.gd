@@ -2,8 +2,8 @@ class_name UserInterface extends Control
 
 
 @onready var pollen_label: Label = %PollenLabel
-@onready var honey_label: Label = $HoneyContainer/Honeylabel
-@onready var bee_label: Label = $BeeContainer/BeeLabel
+@onready var honey_label: Label = $Honeylabel
+@onready var bee_label: Label = $BeeLabel
 @onready var level_label: Label = $LevelLabel
 @onready var pollution_label: Label = $PollutionLabel
 

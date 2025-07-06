@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kx0rc8xji11i"]
 
-[ext_resource type="Texture2D" uid="uid://bl42mtkp132yk" path="res://icon.svg" id="1_f1qqs"]
+[ext_resource type="Texture2D" uid="uid://ci8s66kyim5cn" path="res://features/main_beehive/beehive.png" id="1_f1qqs"]
 
 [node name="MainBeehive" type="Node2D"]
 y_sort_enabled = true

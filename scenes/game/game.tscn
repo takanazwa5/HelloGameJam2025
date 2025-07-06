@@ -1,14 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbspnmo5tkauu"]
+[gd_scene load_steps=9 format=3 uid="uid://bbspnmo5tkauu"]
 
 [ext_resource type="PackedScene" uid="uid://cojnw7u11cd6b" path="res://features/level/level.tscn" id="1_7h61r"]
 [ext_resource type="Script" uid="uid://dfty7s10l744r" path="res://scenes/game/game.gd" id="1_kelw5"]
 [ext_resource type="PackedScene" uid="uid://res5ogmnb6qh" path="res://features/player/player.tscn" id="1_sul5r"]
-[ext_resource type="PackedScene" uid="uid://b2a1nh3d2xlrx" path="res://features/flower/flower.tscn" id="3_0sr1o"]
-[ext_resource type="PackedScene" uid="uid://djc7dma5fwyrk" path="res://features/killable/kosiara/kosiara.tscn" id="5_5i0tg"]
-[ext_resource type="PackedScene" uid="uid://c71c4f8mgpjkw" path="res://features/killable/ognisko/ognisko.tscn" id="6_bdhmt"]
-[ext_resource type="PackedScene" uid="uid://wugdxaccemxi" path="res://features/factory/factory.tscn" id="7_bdhmt"]
-[ext_resource type="PackedScene" uid="uid://b8n517sc0drjs" path="res://features/obstacles/wiatrak/wiatrak.tscn" id="8_87uf6"]
+[ext_resource type="Texture2D" uid="uid://dl55q41jwmph3" path="res://Textures/ui/honey_icon.png" id="5_bdhmt"]
+[ext_resource type="PackedScene" uid="uid://kx0rc8xji11i" path="res://features/main_beehive/main_beehive.tscn" id="5_lfrn8"]
+[ext_resource type="FontFile" uid="uid://f5d8tjls3c6w" path="res://Fonts/Pixel (47)/Endless Boss Battle.ttf" id="6_87uf6"]
 [ext_resource type="PackedScene" uid="uid://5byg22o1kh7b" path="res://features/button_hints/button_hints.tscn" id="9_2a8rs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2a8rs"]
+font = ExtResource("6_87uf6")
+font_size = 11
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -19,29 +23,7 @@ unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("1_sul5r")]
 unique_name_in_owner = true
-position = Vector2(160, 90)
-
-[node name="Flowers" type="Node" parent="."]
-
-[node name="Flower" parent="Flowers" instance=ExtResource("3_0sr1o")]
-position = Vector2(367, 174)
-
-[node name="Flower2" parent="Flowers" instance=ExtResource("3_0sr1o")]
-position = Vector2(331, 229)
-
-[node name="Killables" type="Node" parent="."]
-
-[node name="Kosiara" parent="Killables" instance=ExtResource("5_5i0tg")]
-position = Vector2(172, 299)
-
-[node name="Ognisko" parent="Killables" instance=ExtResource("6_bdhmt")]
-position = Vector2(90, 330)
-
-[node name="Factory" parent="." instance=ExtResource("7_bdhmt")]
-position = Vector2(610, 109)
-
-[node name="Wiatrak" parent="." instance=ExtResource("8_87uf6")]
-position = Vector2(275, 314)
+position = Vector2(936, 833)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -65,3 +47,57 @@ offset_left = 300.0
 offset_top = 140.0
 offset_right = 316.0
 offset_bottom = 176.0
+
+[node name="HoneyIcon" type="TextureRect" parent="CanvasLayer"]
+offset_left = 271.0
+offset_top = 142.0
+offset_right = 281.0
+offset_bottom = 152.0
+texture = ExtResource("5_bdhmt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BeeCostLabel" type="Label" parent="CanvasLayer/HoneyIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 12.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_2a8rs")
+
+[node name="HoneyIcon2" type="TextureRect" parent="CanvasLayer"]
+offset_left = 271.0
+offset_top = 162.0
+offset_right = 281.0
+offset_bottom = 172.0
+texture = ExtResource("5_bdhmt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/HoneyIcon2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 15.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "50"
+label_settings = SubResource("LabelSettings_2a8rs")
+
+[node name="MainBeehive" parent="." instance=ExtResource("5_lfrn8")]
+position = Vector2(866, 827)

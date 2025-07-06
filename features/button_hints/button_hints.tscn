@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://5byg22o1kh7b"]
+[gd_scene load_steps=6 format=3 uid="uid://5byg22o1kh7b"]
 
 [ext_resource type="Texture2D" uid="uid://ckkq3jyvc706r" path="res://Textures/ui/button/button-1.png" id="1_q6o48"]
-[ext_resource type="Texture2D" uid="uid://bl42mtkp132yk" path="res://icon.svg" id="2_fefhc"]
+[ext_resource type="Texture2D" uid="uid://xcq8vl6nlrd8" path="res://features/button_hints/bee.tres" id="2_3r3yi"]
 [ext_resource type="Texture2D" uid="uid://cuchypayd6i8" path="res://Textures/ui/mouse_left.png" id="3_q6o48"]
+[ext_resource type="Texture2D" uid="uid://bpi8ob8iuytex" path="res://features/beehive/beehive_small.png" id="4_3r3yi"]
 [ext_resource type="Texture2D" uid="uid://cr4q8kos2yd1g" path="res://Textures/ui/mouse_right.png" id="4_nk2mp"]
 
 [node name="ButtonHints" type="VBoxContainer"]
@@ -32,7 +33,7 @@ offset_right = 5.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_fefhc")
+texture = ExtResource("2_3r3yi")
 expand_mode = 1
 stretch_mode = 5
 
@@ -73,7 +74,7 @@ offset_right = 5.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_fefhc")
+texture = ExtResource("4_3r3yi")
 expand_mode = 1
 stretch_mode = 5
 
