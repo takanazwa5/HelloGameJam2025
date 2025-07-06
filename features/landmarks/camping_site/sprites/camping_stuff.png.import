@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://78e8l1gmy3gw"
-path="res://.godot/imported/camping_tents.png-2b9d5808d15365c56ff3a91f8a8f7ab9.ctex"
+uid="uid://0m78xrs8ywt8"
+path="res://.godot/imported/camping_stuff.png-15872adbda8de71ff6d79fe64502f840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://features/camping_site/camping_tents.png"
-dest_files=["res://.godot/imported/camping_tents.png-2b9d5808d15365c56ff3a91f8a8f7ab9.ctex"]
+source_file="res://features/landmarks/camping_site/sprites/camping_stuff.png"
+dest_files=["res://.godot/imported/camping_stuff.png-15872adbda8de71ff6d79fe64502f840.ctex"]
 
 [params]
 

@@ -1,31 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://bffcka3cm2e8e"]
+[gd_scene load_steps=5 format=3 uid="uid://dtrr5yir1h7q5"]
 
-[ext_resource type="Texture2D" uid="uid://jp7k3lkremx1" path="res://features/obstacles/kamien/kamien.png" id="1_isdyq"]
+[ext_resource type="Texture2D" uid="uid://d0usnu3teoq5q" path="res://features/obstacles/kamien/kamien2.png" id="1_cwmnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwmnw"]
-size = Vector2(10.7071, 10.6066)
+size = Vector2(12.8284, 6.34392)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ucmw"]
-size = Vector2(29, 8)
+size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hapji"]
-size = Vector2(19, 12)
+size = Vector2(13, 12)
 
 [node name="Kamien" type="StaticBody2D"]
 
 [node name="Kamien" type="Sprite2D" parent="."]
-texture = ExtResource("1_isdyq")
+texture = ExtResource("1_cwmnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.53553, 1.03553)
-rotation = -0.785398
-scale = Vector2(1, 1)
+position = Vector2(-4, -2)
+rotation = -1.38405
 shape = SubResource("RectangleShape2D_cwmnw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_1ucmw")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, -3)
+position = Vector2(1.5, -3)
 shape = SubResource("RectangleShape2D_hapji")
